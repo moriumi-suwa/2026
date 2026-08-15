@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+/* =====================================
+全ページ基本のスタイル
+=======================================*/
+
+body {
+  font-family: "Open Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+img {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+header
+====================================================*/
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  padding-right: 26px;
+}
+.header__wrapper {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+.header-logo {
+  width: 185px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0 0 80px 0;
+  padding: 22px 0 0 40px;
+}
+.header-logo__link {
+  height: 100%;
+}
+
+.header-logo__img {
+  width: 87px;
+}
+@media (max-width: 767px) {
+  .header {
+    padding-right: 15px;
+  }
+
+  .header__wrapper {
+    height: 79px;
+  }
+  /* logo */
+  .header-logo {
+    width: 86px;
+    border-radius: 0 0 40px 0;
+    padding: 10px 0 0 10px;
+  }
+
+  .header-logo__img {
+    width: 53px;
+  }
+}
+
+/* ハンバーガーメニュー ボタン */
+.ham-btn {
+  width: 80px;
+  height: 80px;
+  background: url(../img/top/hamburger.png);
+  background-size: cover;
+  position: relative;
+}
+
+/* メニュー閉じている時の3本線 */
+.ham-btn .bar {
+  background: #307f4a;
+  display: inline-block;
+  transition: all 0.5s;
+  position: absolute;
+  height: 4px;
+  right: 18px;
+  border-radius: 2px;
+}
+.ham-btn .bar-top {
+  width: 40px;
+  top: 30px;
+}
+.ham-btn .bar-middle {
+  width: 28px;
+}
+.ham-btn .bar-bottom {
+  width: 18px;
+  bottom: 26px;
+}
+
+/* activeクラスが付与されると線× */
+.ham-btn.active .bar {
+  background: #307f4a;
+}
+.ham-btn.active .bar-top {
+  width: 30px;
+  top: 35px;
+  left: 35px;
+  transform: translate(-32%, 3px) rotate(-45deg);
+}
+.ham-btn.active .bar-middle {
+  opacity: 0;
+}
+.ham-btn.active .bar-bottom {
+  width: 30px;
+  top: 35px;
+  left: 36px;
+  transform: translate(-32%, 3px) rotate(45deg);
+}
+.ham-btn.active .bar::before {
+  display: none;
+}
+
+/* navigation menuの挙動 */
+.navigation {
+  width: 205px;
+  height: 450px;
+  display: none;
+  background: #006837;
+  border-radius: 0 0 0 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 125px;
+  z-index: -1;
+}
+.navigation__list {
+  text-align: left;
+  padding-left: 40px;
+}
+.navigation__link {
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+  padding: 24px 0;
+  transition: 0.8s;
+}
+
+@media (max-width: 767px) {
+  /* ハンバーガーメニュー ボタン */
+  .ham-btn {
+    width: 50px;
+    height: 50px;
+  }
+  /* メニュー閉じている時の3本線 */
+  .ham-btn .bar {
+    right: 10px;
+  }
+  .ham-btn .bar-top {
+    width: 28px;
+    top: 17px;
+  }
+  .ham-btn .bar-middle {
+    width: 23px;
+  }
+  .ham-btn .bar-bottom {
+    width: 16px;
+    bottom: 13px;
+  }
+  /* activeクラスが付与されると線× */
+  .ham-btn.active .bar-top {
+    top: 21px;
+    left: 20px;
+  }
+  .ham-btn.active .bar-bottom {
+    top: 21px;
+    left: 20px;
+  }
+  /* navigation menuの挙動 */
+  .navigation {
+    width: 184px;
+  }
+}
+
+/* ==================================================
+footer
+====================================================*/
+.footer {
+  width: 100%;
+  height: 700px;
+  background: url(../img/top/bg_blue.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  margin: -200px auto 0;
+}
+
+.footer-logo {
+  max-width: 260px;
+  width: 100%;
+  position: relative;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.footer-logo__img {
+  width: 100%;
+}
+
+/* 申し込みページのリンク */
+.footer-cta {
+  max-width: 890px;
+  width: 80%;
+  position: fixed;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+  z-index: 999;
+}
+.footer-cta__img {
+  width: 68%;
+  margin: 0 auto;
+}
+
+/* 戻るボタン */
+.return-btn {
+  width: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 47px;
+  z-index: 999;
+}
+.return-btn__img {
+  width: 100%;
+}
+
+.copyright {
+  font-size: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+.footer-fish {
+  position: relative;
+  margin-left: 130px;
+}
+.footer-fish__img14 {
+  width: 70px;
+  position: absolute;
+  top: -110px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+.footer-fish__img15 {
+  width: 55px;
+  position: absolute;
+  top: 200px;
+}
+.footer-fish__img16,
+.footer-fish__img17 {
+  width: 40px;
+}
+.footer-fish__img16 {
+  position: absolute;
+  left: 240px;
+  top: 110px;
+}
+.footer-fish__img17 {
+  position: absolute;
+  right: 500px;
+  top: 390px;
+}
+.footer-fish__img18 {
+  width: 120px;
+  position: absolute;
+  right: 70px;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 500px;
+  }
+  .footer__wrapper {
+    margin: 0 0 100px 0;
+  }
+  .footer-logo {
+    width: 180px;
+    bottom: -150px;
+  }
+
+  .footer__list {
+    padding-top: 4%;
+  }
+  .footer__list-item {
+    padding-bottom: 10px;
+  }
+  .footer-cta {
+    width: 100%;
+  }
+  .footer-cta__img {
+    width: 100%;
+  }
+  .copyright {
+    font-size: 8px;
+  }
+  .return-btn {
+    width: 40px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .footer-fish {
+    margin-left: 20px;
+  }
+  .footer-fish__img14 {
+    width: 11%;
+    top: 30px;
+    left: 15%;
+  }
+  .footer-fish__img15 {
+    display: none;
+  }
+  .footer-fish__img16,
+  .footer-fish__img17 {
+    width: 40px;
+  }
+  .footer-fish__img16 {
+    left: 75%;
+    top: -150px;
+  }
+  .footer-fish__img17 {
+    display: none;
+  }
+  .footer-fish__img18 {
+    width: 90px;
+    right: 30px;
+    top: 19px;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer-logo {
+    width: 140px;
+    bottom: -240px;
+  }
+  .footer-fish__img14 {
+    width: 11%;
+    top: 95px;
+    left: 15%;
+  }
+  .footer-fish__img16 {
+    left: 10%;
+    top: -130px;
+  }
+  .footer-fish__img18 {
+    width: 90px;
+    right: 37px;
+    top: -78px;
+  }
+}

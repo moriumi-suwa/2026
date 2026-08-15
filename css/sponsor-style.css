@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.green__bg {
+  width: 100%;
+  background: url(../img/top/bg_green1-new.png);
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+.event-top {
+  max-width: 100%;
+  padding-top: 140px;
+  margin-bottom: 500px;
+}
+.event-top__title {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+.event-top__title--img {
+  width: 100%;
+}
+.event-top__subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .event-top__title {
+    width: 90%;
+  }
+  .event-top__subtitle {
+    font-size: 26px;
+    margin-bottom: 80px;
+  }
+}
+
+/* =====================================
+sponsor
+=======================================*/
+.sponsor__ttl {
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sponsor {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 20px;
+  margin: 0 auto 200px;
+}
+.sponsor-logo {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sponsor-logo__img {
+  width: 100%;
+}
+.special-supporter-sala__logo {
+  width: 428px;
+}
+.special-supporter__logo {
+  width: 190px;
+}
+.hamamatsu-photonics__logo {
+  width: 300px;
+}
+.special-supporter__list {
+  font-size: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  gap: 24px 54px;
+}
+.local-supporter__list {
+  font-size: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 54px;
+}
+.supporter__list,
+.cooperation__list {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 54px;
+}
+.cooperation__name--img {
+  width: 100px;
+}
+.alert {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .sponsor {
+    gap: 20px;
+  }
+  .special-supporter__logo {
+    width: 163px;
+  }
+  .special-supporter-sala__logo {
+    width: 388px;
+  }
+  .special-supporter__list {
+    font-size: 36px;
+    gap: 20px 50px;
+  }
+  .hamamatsu-photonics__logo {
+    width: 284px;
+  }
+  .local-supporter__list {
+    font-size: 32px;
+    gap: 20px 50px;
+  }
+  .supporter__list,
+  .cooperation__list {
+    font-size: 28px;
+    gap: 22px 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor {
+    gap: 10px;
+  }
+  .special-supporter-sala__logo {
+    width: 320px;
+  }
+  .special-supporter__logo {
+    width: 144px;
+  }
+  .hamamatsu-photonics__logo {
+    width: 244px;
+  }
+  .special-supporter__list {
+    font-size: 32px;
+    gap: 18px 36px;
+  }
+  .local-supporter__list {
+    font-size: 28px;
+    gap: 18px 36px;
+  }
+  .supporter__list,
+  .cooperation__list {
+    font-size: 24px;
+    gap: 20px 50px;
+  }
+  .cooperation__name--img {
+    width: 72px;
+  }
+}
+
+/* ==================================================
+menu
+====================================================*/
+.deep-brown__bg {
+  width: 100%;
+  background: url(../img/event/bg_brown2.png);
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+  margin-top: -250px;
+}
+.menu__wrapper {
+  width: 100%;
+  position: relative;
+  padding: 230px 20px 300px;
+  margin: 0 auto;
+}
+.menu-list {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+}
+.menu__list-item {
+  max-width: 300px;
+  width: 40%;
+  height: 130px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.menu-event {
+  background: url(../img/top/menu-botan-bg1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-sponsor {
+  background: url(../img/top/menu-botan-bg2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.menu-contact {
+  width: 50%;
+  height: 150px;
+  font-size: 26px;
+  line-height: 1.6;
+  background: url(../img/top/menu-botan-bg3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .menu__wrapper {
+    padding: 100px 20px 200px;
+    margin: 0 auto;
+  }
+  .menu-list {
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+  .menu__list-item {
+    font-size: 16px;
+    height: 100px;
+    letter-spacing: 0.05em;
+  }
+  .menu-contact {
+    height: 120px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .menu-list {
+    row-gap: 0;
+  }
+  .menu__list-item {
+    font-size: 12px;
+  }
+  .menu-contact {
+    font-size: 16px;
+  }
+}
