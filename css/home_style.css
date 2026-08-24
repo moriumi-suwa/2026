@@ -354,12 +354,16 @@ overview
 .top-overview__wrapper {
   max-width: 900px;
   width: 100%;
-  height: 800px;
+  height: auto;
   background: url(../img/top/overview_bg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: top;
-  padding: 0 30px;
+  padding: 150px 100px 150px;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  line-height: 2.5em;
+  margin-bottom: 20px;
 }
 .top-overview__title {
   position: relative;
@@ -367,7 +371,7 @@ overview
 .top-overview__title--img {
   position: absolute;
   left: -17px;
-  bottom: -20px;
+  top: -32px;
 }
 .top-overview__subtitle {
   position: relative;
@@ -1018,6 +1022,14 @@ menu
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* ==================================================
+共通
+====================================================*/
+.pad_top {
+padding-top: 64px;
+
 }
 
 @media (max-width: 768px) {
