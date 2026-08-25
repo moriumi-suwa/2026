@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* ==================================================
+共通
+====================================================*/
+.pad_top {
+  padding-top: 64px;
+  
+  }
+  
+  .concept {
+  font-size:  1.5rem;
+  font-weight: normal;
+  display: block;
+  padding: 20px 0px;
+  }
+
+  .weight_bold{
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+.concept_title{
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 16px 0px;
+}
+
+ 
