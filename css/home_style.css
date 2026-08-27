@@ -1,28 +1,32 @@
 @charset "utf-8";
 
+/* ==================================================
+BASE
+====================================================*/
 body {
-  /* 既存の設定 */
   display: flex;
   flex-direction: column;
   position: relative;
-
-  /* 追加された設定 */
-  background-color: #06570d; /* お好みで */
+  background-color: #06570d;
 }
 
+
+/* ==================================================
+LOADING
+====================================================*/
 .loading-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-color: #06570d;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #06570d;
   z-index: 1000;
   transition: opacity 1s ease;
 }
+
 .col-md-4 {
   min-height: 10em;
   position: relative;
@@ -32,33 +36,33 @@ body {
 }
 
 .loading__txt {
-  font-size: 20px;
-  color: #31a031;
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  font-size: 20px;
+  color: #31a031;
   text-transform: uppercase;
+  transform: translateX(-50%);
 }
 
 .loading {
-  background: #b5e2fa;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 50% 50%;
+  background: #b5e2fa;
   transform: translate(-50%, -50%);
+  transform-origin: center;
 }
 
 #loading7 {
-  width: 0em;
-  height: 0em;
+  width: 0;
+  height: 0;
   top: 60%;
-  transform-origin: 50% 50%;
+  border: 0 solid rgba(15, 163, 177, 0.5);
   border-radius: 2em;
   transform: translate(-50%, -50%) rotateX(60deg);
+  transform-origin: center;
   transform-style: preserve-3d;
-  border: 0em solid rgba(15, 163, 177, 0.5);
   animation: loading7ripple 2s infinite;
 }
 
@@ -67,16 +71,16 @@ body {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #loading7::before {
   top: 50%;
   width: 0.1em;
   height: 0.1em;
-  border: 0em solid rgba(15, 163, 177, 0.5);
-  border-radius: 2em;
   background: #b5e2fa;
+  border: 0 solid rgba(15, 163, 177, 0.5);
+  border-radius: 2em;
+  transform: translate(-50%, -50%);
   animation: loading7ripple2 2s infinite;
 }
 
@@ -91,23 +95,30 @@ body {
   animation: loading7drop 2s infinite;
 }
 
+
+/* ==================================================
+LOADING ANIMATION
+====================================================*/
 @keyframes loading7drop {
   0% {
     opacity: 0;
     transform: rotateX(-60deg) translate(-50%, -4em) rotateZ(45deg);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
+
   15% {
     opacity: 1;
   }
+
   35% {
-    transform: rotateX(-60deg) translate(-50%, -0.5em) rotateZ(45deg);
     opacity: 1;
+    transform: rotateX(-60deg) translate(-50%, -0.5em) rotateZ(45deg);
   }
+
   36%,
   100% {
-    transform: rotateX(-60deg) translate(-50%, -0.5em) rotateZ(45deg);
     opacity: 0;
+    transform: rotateX(-60deg) translate(-50%, -0.5em) rotateZ(45deg);
   }
 }
 
@@ -118,15 +129,17 @@ body {
     height: 0;
     border-width: 0;
   }
+
   65% {
     background: rgba(15, 163, 177, 0.5);
     border-width: 0.3em;
   }
+
   85%,
   100% {
-    background: rgba(5, 83, 90, 0);
     width: 3.5em;
     height: 3.5em;
+    background: rgba(5, 83, 90, 0);
     border-width: 0;
   }
 }
@@ -138,37 +151,40 @@ body {
     height: 0;
     border-width: 0;
   }
+
   70% {
     background: #b5e2fa;
     border-width: 0.5em;
   }
+
   90%,
   100% {
-    background: rgba(5, 83, 90, 0);
     width: 2em;
     height: 2em;
+    background: rgba(5, 83, 90, 0);
     border-width: 0;
   }
 }
 
+
 /* ==================================================
-main-visual
+MAIN VISUAL
 ====================================================*/
 .green__bg {
   width: 100%;
-  background: url(../img/top/bg_river_new1.png),
-    url(../img/top/bg_green1-new.png);
-  background-size: 190% 67%, cover;
-  background-position: 137% 975px, center;
-  background-repeat: no-repeat, repeat;
+  background:
+    url(../img/top/bg_river_new1.png) no-repeat 137% 975px / 190% 67%,
+    url(../img/top/bg_green1-new.png) repeat center / cover;
   overflow: hidden;
 }
+
 .top-river {
   width: 70%;
   position: absolute;
   top: 900px;
   left: -200px;
 }
+
 .main-visual {
   width: 100%;
   height: 98%;
@@ -176,6 +192,7 @@ main-visual
   left: 0;
   margin-bottom: 200px;
 }
+
 .main-visual__img {
   width: 98%;
   display: block;
@@ -183,70 +200,24 @@ main-visual
   object-position: center;
   margin: 0 auto;
 }
+
 .main-title {
   width: 29%;
   position: absolute;
   top: 38%;
   left: 52%;
-  transform: translateX(-50%);
   opacity: 0;
+  transform: translateX(-50%);
 }
+
 .main-title.visible {
   opacity: 1;
   transition: opacity 2s ease-in-out;
 }
 
-@media (max-width: 1024px) {
-  .green__bg {
-    background-size: 190% 70%, cover;
-    background-position: 137% 743px, center;
-  }
-
-  .main-visual {
-    margin-bottom: 150px;
-  }
-}
-@media (max-width: 768px) {
-  .green__bg {
-    width: 100%;
-    background: url(../img/top/sp_river_1_0.png),
-      url(../img/top/bg_green1-new.png);
-    background-size: 200% 102%, cover;
-    background-position: 80% 568px, center;
-    background-repeat: no-repeat, repeat;
-  }
-  .main-visual {
-    left: -64px;
-    margin-bottom: 60px;
-  }
-
-  .main-visual__img {
-    width: 135%;
-    overflow: hidden;
-  }
-  .main-title {
-    width: 44%;
-    left: 56%;
-    transform: translateX(-15%);
-  }
-}
-@media (max-width: 400px) {
-  .main-visual {
-    margin-bottom: 80px;
-  }
-  .green__bg {
-    width: 100%;
-    background: url(../img/top/sp_river_1_0.png),
-      url(../img/top/bg_green1-new.png);
-    background-size: 200% 70%, cover;
-    background-position: 56% 480px, center;
-    background-repeat: no-repeat, repeat;
-    overflow: hidden;
-  }
-}
 
 /* ==================================================
-sponsor-logo
+SPONSOR
 ====================================================*/
 .partner {
   font-size: 18px;
@@ -254,6 +225,7 @@ sponsor-logo
   text-align: center;
   margin-bottom: 30px;
 }
+
 .sponsor {
   max-width: 1400px;
   width: 100%;
@@ -261,88 +233,79 @@ sponsor-logo
   justify-content: center;
   gap: 50px;
   padding: 0 20px;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 200px;
 }
+
 .sponsor-logo {
   max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .sponsor-logo__img {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .sponsor {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .partner {
-    font-size: 14px;
-  }
-  .sponsor {
-    gap: 10px;
-    margin-bottom: 255px;
-  }
-  .sponsor-logo {
-    width: 250px;
-  }
-}
 
 /* ==================================================
-overview
+OVERVIEW
 ====================================================*/
 .top-overview {
-  max-width: 100%;
-  text-align: center;
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 0 20px;
   margin: 0 auto;
 }
-/* overviewの背景の装飾 */
+
+
+/* decoration */
 .top-overview__bg-left1 {
   width: 250px;
   position: absolute;
-  left: -75px;
   top: -166px;
+  left: -75px;
 }
-/* 草むらから顔を出す鹿 */
+
 .top-overview__bg-left1-1 {
   width: 150px;
   position: absolute;
-  left: -9px;
   top: 154px;
+  left: -9px;
   transition: all 1s ease;
 }
+
 .top-overview__bg-left2 {
   width: 250px;
   position: absolute;
   left: -92px;
   bottom: -95px;
 }
+
 .top-overview__bg-right-bench {
   max-width: 268px;
   position: absolute;
   top: -79px;
   right: -17px;
 }
+
 .top-overview__bg-right-tree {
   width: 300px;
   position: absolute;
   top: 90px;
   right: -50px;
 }
+
 .top-overview__right-grass {
   width: 250px;
   position: absolute;
   right: -40px;
   bottom: -282px;
 }
+
 .top-overview__right-grass1 {
   width: 150px;
   position: absolute;
@@ -350,228 +313,113 @@ overview
   bottom: -194px;
   transition: all 1s ease;
 }
-/* overview　中身 */
+
+
+/* content */
 .top-overview__wrapper {
   max-width: 900px;
   width: 100%;
   height: auto;
-  background: url(../img/top/overview_bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: top;
-  padding: 150px 100px 150px;
-  font-size: 1.3rem;
-  letter-spacing: 0.15em;
-  line-height: 2.5em;
-  margin-bottom: 20px;
+  padding: 162px 88px;
+  background: url(../img/top/overview_bg.png) no-repeat top / 100% 100%;
+  font-size: 1.2rem;
+  line-height: 2.2;
 }
-.top-overview__title {
-  position: relative;
-}
+
 .top-overview__title--img {
   position: absolute;
+  top: -20px;
   left: -17px;
-  top: -32px;
 }
-.top-overview__subtitle {
-  position: relative;
-  top: 87px;
-  margin-bottom: 35px;
-}
+
 .top-overview__subtitle--img1,
 .top-overview__subtitle--img2 {
   width: 70%;
   margin-bottom: 20px;
 }
+
 .top-overview__text--theme {
-  font-size: 20px;
   display: block;
+  font-size: 20px;
 }
+
 .top-overview__text {
-  font-size: 18px;
-  letter-spacing: 0.15em;
   position: relative;
   top: 104px;
-  line-height: 1.6em;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
   margin-bottom: 20px;
 }
+
+
+/* Instagram */
 .instagram {
-  text-align: center;
   position: relative;
+  text-align: center;
   padding: 20px 0;
   margin: 40px 0 500px;
 }
+
 .instagram-mark {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-bottom: 20px;
 }
+
 .instagram-logo {
   width: 70px;
 }
+
 .instagram-txt {
   font-size: 20px;
 }
 
-@media (max-width: 1024px) {
-  .top-overview__wrapper {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
-    background: url(../img/top/overview_bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: top;
-    padding: 0 30px;
-  }
-  .top-overview__bg-left1 {
-    left: -24px;
-    top: -161px;
-  }
-  .top-overview__bg-right-bench {
-    top: -190px;
-    right: -17px;
-  }
-
-  .top-overview__right-grass {
-    width: 200px;
-    position: absolute;
-    right: -40px;
-    bottom: -294px;
-  }
-  .top-overview__right-grass1 {
-    width: 150px;
-    right: 0;
-    bottom: -241px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* overviewの背景の装飾 */
-  .top-overview__bg-left1 {
-    display: none;
-  }
-  /* 草むらから顔を出す鹿 */
-  .top-overview__bg-left1-1 {
-    display: none;
-  }
-  .top-overview__bg-left2 {
-    width: 200px;
-    top: -176px;
-  }
-  .top-overview__bg-right-bench {
-    width: 190px;
-    top: -73px;
-    right: -70px;
-  }
-  .top-overview__bg-right-tree {
-    width: 160px;
-  }
-  .top-overview__right-grass {
-    width: 150px;
-    position: absolute;
-    right: -40px;
-    bottom: -350px;
-  }
-  /* 草むらから顔を出す鹿 */
-  .top-overview__right-grass1 {
-    width: 100px;
-    position: absolute;
-    right: -16px;
-    bottom: -320px;
-    transition: all 1s ease;
-  }
-  /* overview　中身 */
-  .top-overview__wrapper {
-    height: 690px;
-  }
-  .top-overview__title {
-    width: 65%;
-  }
-  .top-overview__title--img {
-    width: 100%;
-  }
-  .top-overview__subtitle {
-    width: 85%;
-    margin: 0 auto 10px;
-  }
-  .top-overview__subtitle--img1,
-  .top-overview__subtitle--img2 {
-    width: 100%;
-    margin-bottom: 14px;
-  }
-  .top-overview__text--theme {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .top-overview__text {
-    font-size: 16px;
-  }
-}
-@media (max-width: 460px) {
-  .top-overview__text {
-    font-size: 13px;
-  }
-}
-@media (max-width: 400px) {
-  .top-overview__bg-right-bench {
-    display: none;
-  }
-  .top-overview__wrapper {
-    height: 650px;
-  }
-  .top-overview__title--img {
-    position: absolute;
-    left: -17px;
-    bottom: -10px;
-  }
-  .top-overview__subtitle--img3 {
-    width: 70%;
-  }
-}
 
 /* ==================================================
-event-details
+EVENT DETAILS
 ====================================================*/
-
 .deep-green__bg {
   width: 100%;
-  background: url(../img/top/pc_river_2_0.png), url(../img/top/bg_green2.png);
-  background-size: 200% 2500px, cover;
-  background-position: 74% 500px, top;
-  background-repeat: no-repeat, repeat;
   padding-bottom: 500px;
   margin-top: -300px;
+  background:
+    url(../img/top/pc_river_2_0.png) no-repeat 74% 500px / 200% 2500px,
+    url(../img/top/bg_green2.png) repeat top / cover;
 }
+
 .event-details__title {
   max-width: 570px;
   width: 100%;
   display: block;
   margin-left: auto;
 }
+
 .event-details__title-img {
   width: 100%;
   padding-right: 40px;
   margin-bottom: 30px;
 }
+
 .event-details__wrapper {
   width: 100%;
   overflow: hidden;
 }
-.event-details__top-row {
-  display: flex;
-  width: calc(
-    2 * (400px * 6 + 10px * 12)
-  ); /* 2倍の幅にしてループをシームレスにする */
-  animation: scroll-left 50s linear infinite;
-}
+
+.event-details__top-row,
 .event-details__bottom-row {
   display: flex;
-  width: calc(
-    2 * (400px * 6 + 10px * 12)
-  ); /* 2倍の幅にしてループをシームレスにする */
-  animation: scroll-right 50s linear infinite;
+  width: calc(2 * (400px * 6 + 10px * 12));
+}
+
+.event-details__top-row {
+  margin-bottom: 40px;
+  animation: scroll-left 50s infinite linear 0.5s;
+}
+
+.event-details__bottom-row {
+  animation: scroll-right 50s infinite linear 0.5s both;
 }
 
 .event-details__slide-left,
@@ -579,123 +427,59 @@ event-details
   width: 400px;
   margin: 0 10px;
 }
+
 .event-details__img {
   width: 100%;
 }
-.event-details__top-row {
-  animation: scroll-left 50s infinite linear 0.5s;
-  margin-bottom: 40px;
-}
-.event-details__bottom-row {
-  animation: scroll-right 50s infinite linear 0.5s both;
-}
+
 @keyframes scroll-left {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+
+  to {
     transform: translateX(
       calc(-1 * (400px * 6 + 10px * 12))
-    ); /* 6つのアイテム幅+間隔を引く */
+    );
   }
 }
+
 @keyframes scroll-right {
-  0% {
-    transform: translateX(calc(-1 * (400px * 6 + 10px * 12)));
+  from {
+    transform: translateX(
+      calc(-1 * (400px * 6 + 10px * 12))
+    );
   }
-  100% {
+
+  to {
     transform: translateX(0);
   }
 }
 
-@media (max-width: 768px) {
-  .deep-green__bg {
-    background: url(../img/top/sp_river_2_0.png),
-      url(../img/top/sp_bg_darkgreen.png);
-    background-size: 200% 78%, cover;
-    background-position: 81% 500px, top;
-    background-repeat: no-repeat, repeat;
-  }
-  .event-details__title {
-    width: 80%;
-    text-align: center;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-  .event-details__title-img {
-    width: 100%;
-    padding-right: 0;
-  }
-  .event-details__slide-left,
-  .event-details__slide-right {
-    width: 200px;
-    margin: 0 10px;
-  }
-  .event-details__top-row {
-    display: flex;
-    width: calc(
-      2 * (200px * 6 + 10px * 12)
-    ); /* 2倍の幅にしてループをシームレスにする */
-    animation: scroll-left 50s linear infinite;
-  }
-  .event-details__bottom-row {
-    display: flex;
-    width: calc(
-      2 * (200px * 6 + 10px * 12)
-    ); /* 2倍の幅にしてループをシームレスにする */
-    animation: scroll-right 50s linear infinite;
-  }
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(
-        calc(-1 * (200px * 6 + 10px * 12))
-      ); /* 6つのアイテム幅+間隔を引く */
-    }
-  }
-  @keyframes scroll-right {
-    0% {
-      transform: translateX(calc(-1 * (200px * 6 + 10px * 12)));
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-}
 
 /* ==================================================
-event
+EVENT
 ====================================================*/
 .event {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-/* ふわふわする白い蝶々 */
+
+
+/* decoration */
 .event__top-Butterfly {
   width: 150px;
   position: absolute;
   top: 180px;
   right: 0;
-  transition: transform 2s ease; /* 移動アニメーションをゆっくりにする */
+  transition: transform 2s ease;
 }
+
 .float {
   top: 80px;
   right: 100px;
   animation: float 2s infinite ease-in-out;
-}
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .event__bg-right {
@@ -704,48 +488,63 @@ event
   top: 233px;
   right: -95px;
 }
+
 .event__bg-left {
   width: 350px;
   position: absolute;
   top: 610px;
   left: -100px;
 }
+
 .event__bg-right2 {
   width: 285px;
   position: absolute;
-  bottom: 353px;
   right: 100px;
+  bottom: 353px;
 }
 
-/* ふわふわする黄色い蝶々 */
 .event__bottom-butterfly {
   width: 150px;
   position: absolute;
   bottom: -150px;
   left: 50px;
-  transition: transform 2s ease; /* 移動アニメーションをゆっくりにする */
+  transition: transform 2s ease;
 }
+
 .moved {
   transform: translate(100px, -100px);
 }
-@keyframes yellow-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 .butterfly {
   bottom: -50px;
   left: 150px;
   animation: yellow-float 2s infinite ease-in-out;
 }
 
-/* event内容 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes yellow-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* content */
 .event__wrapper {
   max-width: 1000px;
   padding: 0 20px;
@@ -755,189 +554,85 @@ event
 .event-title {
   margin-bottom: 30px;
 }
+
 .event-title img {
   width: 30%;
 }
-.experience-left {
+
+.experience-left,
+.experience-right {
   display: flex;
   justify-content: center;
+}
+
+.experience-left {
   align-items: flex-start;
   margin-bottom: 100px;
 }
+
 .experience-right {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
   margin-bottom: 70px;
 }
+
 .experience__inner-img {
   width: 45%;
   object-fit: contain;
   object-position: center;
 }
+
 .sp-experience__inner-img {
   display: none;
 }
+
 .experience__container {
   width: 60%;
   padding: 0 40px;
 }
 
-
 .experience__container--title {
-  font-size: 26px;
+  color: #fff;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 0.15em;
   margin: 20px auto 20px 0;
-  line-height: 1.5;
 }
+
 .experience__container--text {
   color: #fff;
   font-size: 20px;
-  letter-spacing: 0.15em;
   line-height: 1.6;
+  letter-spacing: 0.15em;
 }
+
 .experience__btn {
   max-width: 220px;
   width: 80%;
   height: 90px;
-  font-size: 26px;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background: url(../img/top-event/botan-kuwasiku.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background: url(../img/top-event/botan-kuwasiku.png) no-repeat center / contain;
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .event__bg-left {
-    display: none;
-  }
-  .event__bg-right {
-    width: 200px;
-    position: absolute;
-    top: 130px;
-    right: -100px;
-  }
-  /* ふわふわする白い蝶々 */
-  .event__top-Butterfly {
-    width: 80px;
-    position: absolute;
-    top: 180px;
-    right: -80px;
-    transition: transform 3s ease; /* 移動アニメーションをゆっくりにする */
-  }
-  .float {
-    top: 80px;
-    right: 20px;
-    animation: float 2s infinite ease-in-out;
-  }
-  /* ふわふわする黄色い蝶々 */
-  .event__bottom-butterfly {
-    width: 70px;
-    position: absolute;
-    bottom: -150px;
-    left: -65px;
-    transition: transform 2s ease; /* 移動アニメーションをゆっくりにする */
-  }
-  .moved {
-    transform: translate(100px, -100px);
-  }
-  .butterfly {
-    bottom: -50px;
-    left: 35px;
-    animation: yellow-float 2s infinite ease-in-out;
-  }
-
-  .event__wrapper {
-    position: relative;
-    background: url(../img/top-event/event-sp_bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: top;
-    padding-bottom: 50px;
-    margin: 160px 20px 80px;
-    z-index: 1;
-  }
-  .event-title {
-    width: 46%;
-    padding-top: 30px;
-    margin: 0 auto 30px;
-  }
-  .event-title img {
-    width: 100%;
-  }
-  .experience-left {
-    flex-direction: column;
-  }
-  .experience-right {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-bottom: 70px;
-  }
-  .experience__inner-img {
-    display: none;
-  }
-  .sp-experience__inner-img {
-    width: 100%;
-    display: block;
-  }
-  .experience__container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-  }
- 
-  .experience__container--heading {
-    width: 50%;
-    max-width: 200px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .heading__underbar {
-    width: 100%;
-    border-bottom: solid 2px #fff;
-    padding-bottom: 10px;
-  }
-  .experience__container--text {
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 0.15em;
-    line-height: 1.6;
-    margin-top: 20px;
-  }
-  .experience__btn {
-    max-width: 180px;
-    font-size: 18px;
-  }
-}
-@media (max-width: 430px) {
-  .event__bg-left {
-    top: 1020px;
-  }
-}
 
 /* ==================================================
-menu
+MENU
 ====================================================*/
 .brown__bg {
   width: 100%;
   height: 100%;
-  background: url(../img/top/pc_river_3_0.png),
-    url(../img/top/menu-bg_brown.png);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 97% 800px, cover;
-  background-position: 372px 62px, top;
   margin-top: -565px;
   overflow: hidden;
+  background:
+    url(../img/top/pc_river_3_0.png) no-repeat 372px 62px / 97% 800px,
+    url(../img/top/menu-bg_brown.png) no-repeat top / cover;
 }
 
 .menu__wrapper {
@@ -946,12 +641,14 @@ menu
   padding: 200px 20px 300px;
   margin: 0 auto;
 }
+
 .menu__bg-right {
   width: 145px;
   position: absolute;
   top: 199px;
   right: 42px;
 }
+
 .menu__bg-left2 {
   width: 270px;
   position: absolute;
@@ -965,102 +662,411 @@ menu
   left: 80px;
   bottom: 170px;
 }
+
 .menu-title {
   width: 210px;
   height: 55px;
   display: block;
   margin: 0 auto 46px;
 }
+
 .menu-title__img {
   width: 100%;
 }
+
 .menu-list {
   max-width: 680px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  flex-wrap: wrap;
   text-align: center;
   margin: 0 auto;
 }
+
 .menu__list-item {
   max-width: 300px;
   width: 40%;
   height: 130px;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
 }
+
+.menu-event,
+.menu-sponsor,
+.menu-contact {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .menu-event {
-  background: url(../img/top/menu-botan-bg1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url(../img/top/menu-botan-bg1.png);
 }
+
 .menu-sponsor {
-  background: url(../img/top/menu-botan-bg2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url(../img/top/menu-botan-bg2.png);
 }
+
 .menu-contact {
   width: 50%;
   height: 150px;
   font-size: 26px;
   line-height: 1.6;
-  background: url(../img/top/menu-botan-bg3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url(../img/top/menu-botan-bg3.png);
 }
 
+
+/* ==================================================
+RESPONSIVE
+Tablet / Smartphone
+768px以下
+====================================================*/
 @media (max-width: 768px) {
+
+  /* main visual */
+  .green__bg {
+    background:
+      url(../img/top/sp_river_1_0.png) no-repeat 80% 568px / 200% 102%,
+      url(../img/top/bg_green1-new.png) repeat center / cover;
+  }
+
+  .main-visual {
+    left: -64px;
+    margin-bottom: 60px;
+  }
+
+  .main-visual__img {
+    width: 135%;
+  }
+
+  .main-title {
+    width: 44%;
+    left: 56%;
+    transform: translateX(-15%);
+  }
+
+
+  /* sponsor */
+  .partner {
+    font-size: 14px;
+  }
+
+  .sponsor {
+    gap: 10px;
+    margin-bottom: 255px;
+  }
+
+  .sponsor-logo {
+    width: 250px;
+  }
+
+
+  /* overview */
+  .top-overview__bg-left1,
+  .top-overview__bg-left1-1 {
+    display: none;
+  }
+
+  .top-overview__bg-left2 {
+    width: 200px;
+    top: -176px;
+  }
+
+  .top-overview__bg-right-bench {
+    width: 190px;
+    top: -73px;
+    right: -70px;
+  }
+
+  .top-overview__bg-right-tree {
+    width: 160px;
+  }
+
+  .top-overview__right-grass {
+    width: 150px;
+    right: -40px;
+    bottom: -350px;
+  }
+
+  .top-overview__right-grass1 {
+    width: 100px;
+    right: -16px;
+    bottom: -320px;
+  }
+
+  .top-overview__wrapper {
+    max-width: 700px;
+    padding: 88px 32px;
+    text-align: left;
+  }
+
+  .top-overview__title {
+    width: 65%;
+  }
+
+  .top-overview__title--img {
+
+  }
+
+  .top-overview__subtitle {
+
+  }
+
+  .top-overview__subtitle--img1,
+  .top-overview__subtitle--img2 {
+
+  }
+
+  .top-overview__text--theme {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .top-overview__text {
+    font-size: 16px;
+  }
+
+
+  /* event details */
+  .deep-green__bg {
+    background:
+      url(../img/top/sp_river_2_0.png) no-repeat 81% 500px / 200% 78%,
+      url(../img/top/sp_bg_darkgreen.png) repeat top / cover;
+  }
+
+  .event-details__title {
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .event-details__title-img {
+    padding-right: 0;
+  }
+
+  .event-details__top-row,
+  .event-details__bottom-row {
+    width: calc(2 * (200px * 6 + 10px * 12));
+  }
+
+  .event-details__slide-left,
+  .event-details__slide-right {
+    width: 200px;
+  }
+
+
+  /* event */
+  .event__bg-left {
+    display: none;
+  }
+
+  .event__bg-right {
+    width: 200px;
+    top: 130px;
+    right: -100px;
+  }
+
+  .event__top-Butterfly {
+    width: 80px;
+    right: -80px;
+    transition-duration: 3s;
+  }
+
+  .float {
+    top: 80px;
+    right: 20px;
+  }
+
+  .event__bottom-butterfly {
+    width: 70px;
+    left: -65px;
+  }
+
+  .butterfly {
+    left: 35px;
+  }
+
+  .event__wrapper {
+    position: relative;
+    padding-bottom: 50px;
+    margin: 160px 20px 80px;
+    background: url(../img/top-event/event-sp_bg.png) no-repeat top / 100% 100%;
+    z-index: 1;
+  }
+
+  .event-title {
+    width: 46%;
+    padding-top: 30px;
+    margin: 0 auto 30px;
+  }
+
+  .event-title img {
+    width: 100%;
+  }
+
+  .experience-left,
+  .experience-right {
+    flex-direction: column;
+  }
+
+  .experience__inner-img {
+    display: none;
+  }
+
+  .sp-experience__inner-img {
+    width: 100%;
+    display: block;
+  }
+
+  .experience__container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .experience__container--title {
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+
+  .experience__container--heading {
+    max-width: 200px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .heading__underbar {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+  }
+
+  .experience__container--text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .experience__btn {
+    max-width: 180px;
+    font-size: 18px;
+  }
+
+
+  /* menu */
   .brown__bg {
-    background: url(../img/top/sp_river_3_0.png),
-      url(../img/top/menu-bg_brown.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 91% 972px, cover;
-    background-position: 211px 62px, top;
+    background:
+      url(../img/top/sp_river_3_0.png) no-repeat 211px 62px / 91% 972px,
+      url(../img/top/menu-bg_brown.png) no-repeat top / cover;
   }
 
   .menu__bg-right {
     display: none;
   }
+
   .menu__bg-left {
     width: 100px;
     left: 24px;
-    bottom: 170px;
   }
 
   .menu__bg-left2 {
     width: 150px;
-    position: absolute;
     top: 80px;
     left: -50px;
   }
-  .menu-title__img {
-    width: 100%;
-  }
+
   .menu-list {
     column-gap: 40px;
     row-gap: 20px;
   }
+
   .menu__list-item {
     font-size: 16px;
     letter-spacing: 0.05em;
   }
+
   .menu-contact {
     height: 120px;
     font-size: 20px;
   }
 }
-@media (max-width: 570px) {
+
+
+/* ==================================================
+EVENT DETAILS ANIMATION
+768px以下
+====================================================*/
+@media (max-width: 768px) {
+
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(
+        calc(-1 * (200px * 6 + 10px * 12))
+      );
+    }
+  }
+
+  @keyframes scroll-right {
+    from {
+      transform: translateX(
+        calc(-1 * (200px * 6 + 10px * 12))
+      );
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+/* ==================================================
+RESPONSIVE
+Small Smartphone
+480px以下
+====================================================*/
+@media (max-width: 480px) {
+
+  /* main visual */
+  .green__bg {
+    background-position: 56% 480px, center;
+    background-size: 200% 70%, cover;
+  }
+
+  .main-visual {
+    margin-bottom: 80px;
+  }
+
+
+  /* overview */
+  .top-overview__bg-right-bench {
+    display: none;
+  }
+
+  .top-overview__subtitle--img3 {
+    width: 70%;
+  }
+
+  .top-overview__text {
+    font-size: 13px;
+  }
+
+
+  /* menu */
   .menu-title {
     width: 36%;
     height: auto;
@@ -1068,14 +1074,17 @@ menu
     justify-content: center;
     margin: 0 auto 50px;
   }
+
   .menu-list {
     row-gap: 0;
   }
+
   .menu__list-item {
     height: 80px;
     font-size: 12px;
     margin-bottom: 20px;
   }
+
   .menu-contact {
     font-size: 16px;
   }
