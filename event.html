@@ -1,983 +1,1032 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      第3回もりうみfestival｜「みずうみ」で学ぶ、わたしたちの責任と役割
-    </title>
+  <title>
+    第3回もりうみfestival｜「みずうみ」で学ぶ、わたしたちの責任と役割
+  </title>
 
-    <meta
-      name="description"
-      content="第3回もりうみfestivalを2026年10月17日・18日に諏訪湖周辺で開催します。森での伐倒体験、諏訪湖でのカヤック・ヒシ刈り、諏訪湖遊覧・釜口水門視察、脱炭素ゲーム、Water Scope Japanフォーラムなど、体験を通して森・里・川・海のつながりを学ぶ2日間です。"
-    />
+  <meta
+    name="description"
+    content="第3回もりうみfestivalを2026年10月17日・18日に諏訪湖周辺で開催します。森での伐倒体験、諏訪湖でのカヤック・ヒシ刈り、諏訪湖遊覧・釜口水門視察、脱炭素ゲーム、Water Scope Japanフォーラムなど、体験を通して森・里・川・海のつながりを学ぶ2日間です。"
+  />
 
-    <meta
-      name="keywords"
-      content="天竜川流域,もりうみfestival,森里川海,諏訪湖,脱炭素,ゼロカーボン"
-    />
+  <meta
+    name="keywords"
+    content="天竜川流域,もりうみfestival,森里川海,諏訪湖,脱炭素,ゼロカーボン"
+  />
 
-    <!-- css -->
-    <link rel="stylesheet" href="./css/destyle.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/event-style.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/destyle.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/event-style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- aos -->
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+  <!-- aos -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet"
+  />
+</head>
 
-  <body>
+<body>
+
+  <!-- ==================================================
+  HEADER
+  =================================================== -->
+  <header class="header">
+    <div class="header__wrapper">
+
+      <a class="header-logo__link" href="index.html">
+        <h1 class="header-logo">
+          <img
+            class="header-logo__img"
+            src="./img/top/header-logo.png"
+            alt="天竜川流域 森里川海プロジェクト"
+          />
+        </h1>
+      </a>
+
+      <button
+        class="ham-btn"
+        id="js-burger-menu"
+        type="button"
+        aria-label="メニューを開く"
+      >
+        <span class="bar bar-top"></span>
+        <span class="bar bar-middle"></span>
+        <span class="bar bar-bottom"></span>
+      </button>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="index.html">
+              トップ
+            </a>
+          </li>
+
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="event.html">
+              イベントについて
+            </a>
+          </li>
+
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="sponsor.html">
+              スポンサー紹介
+            </a>
+          </li>
+
+          <li class="navigation__list-item">
+            <a
+              class="navigation__link"
+              href="https://peatix.com/event/4592663/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申込み
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================================================
+  MAIN
+  =================================================== -->
+  <main>
+
     <!-- ==================================================
-    HEADER
+    GREEN AREA
     =================================================== -->
-    <header class="header">
-      <div class="header__wrapper">
-        <a class="header-logo__link" href="index.html">
-          <h1 class="header-logo">
+    <div class="green__bg">
+
+      <!-- EVENT TOP -->
+      <section class="event-top">
+
+        <h2 class="event-top__title">
+          <img
+            class="event-top__title--img"
+            src="./img/top/morigurashi-festival.png"
+            alt="もりぐらしfestival"
+          />
+        </h2>
+
+        <h2 class="event-top__subtitle">
+          イベントについて
+        </h2>
+
+        <h3 class="partner">
+          スペシャルパートナー
+        </h3>
+
+        <div class="sponsor">
+          <div class="sponsor-logo">
+
             <img
-              class="header-logo__img"
-              src="./img/top/header-logo.png"
-              alt="天竜川流域 森里川海プロジェクト"
+              class="sponsor-logo__img"
+              src="./img/sponsor/epson-logo_white.svg"
+              alt="EPSON"
             />
-          </h1>
-        </a>
 
-        <button
-          class="ham-btn"
-          id="js-burger-menu"
-          type="button"
-          aria-label="メニューを開く"
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ==================================================
+      PURPOSE
+      =================================================== -->
+      <section class="purpose">
+
+        <img
+          class="purpose__left-top"
+          src="./img/event/purpose_left1.png"
+          alt=""
+        />
+
+        <img
+          class="purpose__right-top"
+          src="./img/event/purpose_right1.png"
+          alt=""
+        />
+
+        <img
+          class="purpose__left-bottom"
+          src="./img/event/purpose_left2.png"
+          alt=""
+        />
+
+        <div class="purpose__wrapper">
+
+          <article
+            class="purpose__top"
+            data-aos="fade-up"
+          >
+
+            <p class="purpose__text">
+
+              天竜川流域森里川海湖天龍プロジェクトは、
+              環境省の森里川海プロジェクトに賛同し
+
+              <span class="weight_bold">
+                「森」「里」「川」「海」
+              </span>
+
+              を体験し、学び、楽しむ、本物の機会を提供したいという想いから始まり、
+              今回第3回もりうみfestivalを開催します。
+
+            </p>
+
+            <h3 class="purpose__top-comment">
+              自然と共生した<br />
+              未来を目指して。
+            </h3>
+
+          </article>
+
+
+          <div
+            class="purpose__middle"
+            data-aos="fade-up"
+          >
+
+            <p class="purpose__text purpose__middle--text">
+
+              もりうみfestivalは体験型の学習機会であり、
+              私たちが大切にすることは気候変動対応最前線の現場で活躍している人と出会い、
+              生の声を聞き、観て感じて、実際の作業をすることを通して
+              本物に触れる機会が重要だと考えています。
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="purpose__bottom"
+            data-aos="fade-up"
+          >
+
+            <p class="purpose__text purpose__bottom--text">
+
+              第3回もりうみfestivalは、
+              天竜川の源流である諏訪湖周辺を舞台に開催します。
+              森や湖での体験を通して、
+
+              <span class="weight_bold">
+                森・里・川・海
+              </span>
+
+              のつながりと、その環境を未来へつなぐための
+              私たちの責任と役割について考えます。
+
+            </p>
+
+          </div>
+
+
+          <!-- modal button -->
+          <button
+            class="openModal purpose-document"
+            data-pdf="./pdf/event-mokuteki.pdf"
+            type="button"
+          >
+            資料はこちら
+          </button>
+
+
+          <!-- modal -->
+          <div
+            id="modal"
+            class="modal"
+          >
+
+            <div class="modal-content">
+
+              <button
+                class="close"
+                type="button"
+                aria-label="閉じる"
+              >
+                &times;
+              </button>
+
+              <iframe
+                id="pdfViewer"
+                class="pdf-viewer"
+                title="イベント資料"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ==================================================
+    DEEP GREEN AREA
+    =================================================== -->
+    <div class="deep-green__bg">
+
+      <!-- ==================================================
+      PLAN
+      =================================================== -->
+      <section class="plan">
+
+        <!-- decoration -->
+        <img
+          class="plan__bg-right"
+          src="./img/event/bg_plan-right.png"
+          alt=""
+        />
+
+        <img
+          class="plan__bg-left"
+          src="./img/event/bg_plan-left.png"
+          alt=""
+        />
+
+        <!-- banner -->
+        <img
+          class="plan__banner"
+          src="./img/event/banner1.png"
+          alt="抽選40組様を特別無料ご招待。一組2名様でイベント体験とホテルディナーバイキングが無料で楽しめる特別な2日間。"
+        />
+
+
+        <div
+          class="plan__wrapper"
+          data-aos="fade-up"
         >
-          <span class="bar bar-top"></span>
-          <span class="bar bar-middle"></span>
-          <span class="bar bar-bottom"></span>
-        </button>
 
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__list-item">
-              <a class="navigation__link" href="index.html">
-                トップ
-              </a>
-            </li>
+          <h2 class="event_title">イベントについて
+          </h2>
 
-            <li class="navigation__list-item">
-              <a class="navigation__link" href="event.html">
+
+          <div class="event_gaiyo">
+
+            <img
+              src="./img/event/event_title01.png"
+              alt="イベント概要"
+            />
+
+          </div>
+
+
+          <p class="plan-text">
+
+            第3回もりうみfestivalは、
+            天竜川の源流である諏訪湖地域を舞台に、
+
+            <span class="weight_bold">
+              「森・里・川・海」
+            </span>
+
+            のつながりを体験しながら学ぶイベントです。
+
+            <br /><br />
+
+            1日目は下諏訪町いずみ湖周辺で伐倒体験を実施。
+            森林環境に直接触れながら、
+            森の役割や自然環境について学びます。
+
+            <br /><br />
+
+            2日目の午前は、
+            諏訪湖でのカヤック・ヒシ刈り・資源循環を学ぶプログラムと、
+            諏訪湖遊覧・釜口水門を巡るバスツアーなどの
+            プログラムから選択して参加します。
+
+            <br /><br />
+
+            午後は、
+            カードゲームを通して脱炭素について楽しく学ぶ
+            「脱炭素ゲーム」と、
+            「気候変動と治水」「フェーズフリー」「流域循環共生圏」
+            をテーマにしたWater Scope Japanフォーラムから
+            選択して参加します。
+
+            <br /><br />
+
+            体験して、学んで、楽しみながら、
+            自然環境と私たちの暮らしのつながり、
+            そして未来のために一人ひとりが担う責任と役割について考える2日間です。
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================================================
+      IMAGE SLIDER
+      =================================================== -->
+      <div class="images-slide">
+
+        <!-- top row -->
+        <ul class="images-slide__top-row">
+
+          <li class="images-slide__left">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image1.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__left">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image2.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__left">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image3.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__left">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image4.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__left">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image5.png"
+              alt=""
+            />
+          </li>
+
+
+          <!-- loop duplication -->
+
+          <li
+            class="images-slide__left"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image1.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__left"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image2.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__left"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image3.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__left"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image4.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__left"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image5.png"
+              alt=""
+            />
+          </li>
+
+        </ul>
+
+
+        <!-- bottom row -->
+        <ul class="images-slide__bottom-row">
+
+          <li class="images-slide__right">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image6.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__right">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image7.png"
+              alt="鳥居の向こうに沈む夕日"
+            />
+          </li>
+
+          <li class="images-slide__right">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image8.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__right">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image9.png"
+              alt=""
+            />
+          </li>
+
+          <li class="images-slide__right">
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image10.png"
+              alt=""
+            />
+          </li>
+
+
+          <!-- loop duplication -->
+
+          <li
+            class="images-slide__right"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image6.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__right"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image7.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__right"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image8.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__right"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image9.png"
+              alt=""
+            />
+          </li>
+
+          <li
+            class="images-slide__right"
+            aria-hidden="true"
+          >
+            <img
+              class="images-slide__img"
+              src="./img/top-event/image10.png"
+              alt=""
+            />
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ==================================================
+      SCHEDULE
+      =================================================== -->
+      <div class="schedule">
+
+        <div
+          class="schedule__wrapper"
+          data-aos="fade-up"
+        >
+
+          <img
+            class="schedule__img"
+            src="./img/event/schedule.png"
+            alt="イベントスケジュール"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /deep-green__bg -->
+
+
+    <!-- ==================================================
+    COURSE AREA
+    =================================================== -->
+    <div class="thin-brown__bg">
+
+      <!-- decoration -->
+
+      <img
+        class="course__bg-left"
+        src="./img/event/course__bg-left.png"
+        alt=""
+      />
+
+      <img
+        class="course__bg-right"
+        src="./img/event/course__bg-right.png"
+        alt=""
+      />
+
+
+      <section class="course">
+
+        <div class="course__wrapper">
+
+          <h2 class="event__section-title course__title">
+            体験プログラム
+          </h2>
+
+
+          <div class="course__container">
+
+            <!-- A -->
+            <section class="course__contents">
+
+              <img
+                class="course__contents--img"
+                src="./img/top-event/taikenn-img1.png"
+                alt="森での伐倒体験"
+              />
+
+              <h3 class="course__contents--title">
+                Ａ.森の伐倒体験
+              </h3>
+
+              <p class="course__contents--subtitle">
+                森を体験し、森を知る
+              </p>
+
+              <p class="course__contents--text">
+                下諏訪町いずみ湖周辺の森で伐倒体験を行います。
+                実際の森林環境に触れながら、
+                森の役割や自然環境について学びます。
+              </p>
+
+            </section>
+
+
+            <!-- B -->
+            <section class="course__contents course__contents--bg1">
+
+              <img
+                class="course__contents--img"
+                src="./img/top-event/image11.png"
+                alt="諏訪湖アクティビティ"
+              />
+
+              <h3 class="course__contents--title">
+                Ｂ.諏訪湖アクティビティ
+              </h3>
+
+              <p class="course__contents--text">
+                諏訪湖でカヤックやヒシ刈りを体験します。
+                湖の環境に直接触れながら、
+                自然環境と資源循環について学びます。
+              </p>
+
+            </section>
+
+
+            <!-- C -->
+            <section class="course__contents course__contents--bg2">
+
+              <img
+                class="course__contents--img"
+                src="./img/top-event/image12.png"
+                alt="諏訪湖と水環境"
+              />
+
+              <h3 class="course__contents--title">
+                Ｃ.諏訪湖・釜口水門<br />
+                視察ツアー
+              </h3>
+
+              <p class="course__contents--text">
+                諏訪湖を遊覧し、釜口水門を巡るバスツアーを実施。
+                諏訪湖と天竜川のつながりや資源循環について学びます。
+              </p>
+
+            </section>
+
+
+            <!-- D -->
+            <section class="course__contents course__contents--bg2">
+
+              <img
+                class="course__contents--img"
+                src="./img/top-event/taikenn-img4.png"
+                alt="脱炭素ゲーム"
+              />
+
+              <h3 class="course__contents--title">
+                D．脱炭素カードゲーム
+              </h3>
+
+              <p class="course__contents--text">
+                カードゲームを通して「脱炭素」について楽しく学ぶ
+                体験型プログラムです。
+                参加者同士で考えながら、
+                持続可能な未来への理解を深めます。
+              </p>
+
+            </section>
+
+
+            <!-- E -->
+            <section class="course__contents course__contents--bg2">
+
+              <img
+                class="course__contents--img"
+                src="./img/top-event/image6.png"
+                alt="Water Scope Japanフォーラム"
+              />
+
+              <h3 class="course__contents--title">
+                E.水環境フォーラム
+              </h3>
+
+              <p class="course__contents--text">
+                「気候変動と治水」「フェーズフリー」
+                「流域循環共生圏」をテーマに、
+                これからの地域と水環境について学ぶフォーラムです。
+              </p>
+
+            </section>
+
+          </div>
+
+        </div>
+
+
+        <!-- preparation -->
+        <section class="preparation">
+
+          <div
+            class="preparation__wrapper"
+            data-aos="fade-zoom-in"
+            data-aos-duration="5000"
+          >
+
+            <h4 class="preparation__title">
+              コースの服装・持ち物について
+            </h4>
+
+            <p class="preparation__text">
+              服装：動きやすい服装 / 運動靴 ｜
+              持ち物：タオル / 水筒 / 雨具 / 保険証の写し
+            </p>
+
+            <p class="preparation__text--sp">
+              服装：動きやすい服装 / 運動靴
+              <br />
+              持ち物：タオル / 水筒 / 雨具 / 保険証の写し
+            </p>
+
+          </div>
+
+        </section>
+
+      </section>
+
+    </div>
+
+
+    <!-- ==================================================
+    DEEP BROWN AREA
+    =================================================== -->
+    <div class="deep-brown__bg">
+
+      <!-- DINNER -->
+      <div class="area-map">
+
+        <img
+          class="area-map__bg-left"
+          src="./img/event/map__bg-left.png"
+          alt=""
+        />
+
+        <img
+          class="area-map__bg-right"
+          src="./img/event/map__bg-right.png"
+          alt=""
+        />
+
+
+        <div
+          class="area-map__wrapper"
+          data-aos="fade-up"
+        >
+
+          <h2 class="event__section-title area-map__title">
+            イベント後はホテルディナーバイキングを
+            <br class="area-map__sp-br" />
+            お楽しみください
+          </h2>
+
+          <img
+            class="area-map__img"
+            src="./img/event/dinner.png"
+            alt="ホテルのディナーバイキング"
+          />
+
+        </div>
+
+      </div>
+
+
+      <!-- MENU -->
+      <nav class="menu">
+
+        <div class="menu__wrapper">
+
+          <img
+            class="menu__bg-left"
+            src="./img/event/image12.png"
+            alt=""
+          />
+
+          <img
+            class="menu__bg-right"
+            src="./img/event/menu__bg-right.png"
+            alt=""
+          />
+
+
+          <ul class="menu-list">
+
+            <li class="menu__list-item menu-event">
+              <a href="event.html">
                 イベントについて
               </a>
             </li>
 
-            <li class="navigation__list-item">
-              <a class="navigation__link" href="sponsor.html">
+            <li class="menu__list-item menu-sponsor">
+              <a href="sponsor.html">
                 スポンサー紹介
               </a>
             </li>
 
-            <li class="navigation__list-item">
+            <li class="menu__list-item menu-contact">
+
               <a
-                class="navigation__link"
                 href="https://peatix.com/event/4592663/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                お申込み
+                応募申込みは<br />
+                こちら
               </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-
-    <!-- ==================================================
-    MAIN
-    =================================================== -->
-    <main>
-
-      <!-- ==================================================
-      GREEN AREA
-      =================================================== -->
-      <div class="green__bg">
-
-        <!-- EVENT TOP -->
-        <section class="event-top">
-          <h2 class="event-top__title">
-            <img
-              class="event-top__title--img"
-              src="./img/top/morigurashi-festival.png"
-              alt="もりぐらしfestival"
-            />
-          </h2>
-
-          <h2 class="event-top__subtitle">
-            イベントについて
-          </h2>
-
-          <!-- sponsor -->
-          <h3 class="partner">
-            スペシャルパートナー
-          </h3>
-
-          <div class="sponsor">
-            <div class="sponsor-logo">
-              <img
-                class="sponsor-logo__img"
-                src="./img/sponsor/epson-logo_white.svg"
-                alt="EPSON"
-              />
-            </div>
-          </div>
-        </section>
-
-
-        <!-- ==================================================
-        PURPOSE
-        =================================================== -->
-        <section class="purpose">
-
-          <!-- decoration -->
-          <img
-            class="purpose__left-top"
-            src="./img/event/purpose_left1.png"
-            alt=""
-          />
-
-          <img
-            class="purpose__right-top"
-            src="./img/event/purpose_right1.png"
-            alt=""
-          />
-
-          <img
-            class="purpose__left-bottom"
-            src="./img/event/purpose_left2.png"
-            alt=""
-          />
-
-          <h2 class="event__section-title">
-            目的
-          </h2>
-
-          <div class="purpose__wrapper">
-
-            <article
-              class="purpose__top"
-              data-aos="fade-up"
-            >
-              <p class="purpose__text">
-                天竜川流域森里川海湖天龍プロジェクトは、
-                環境省の森里川海プロジェクトに賛同し
-                <span class="weight_bold">
-                  「森」「里」「川」「海」
-                </span>
-                を体験し、学び、楽しむ、本物の機会を提供したいという想いから始まり、
-                今回第3回もりうみfestivalを開催します。
-              </p>
-
-              <h3 class="purpose__top-comment">
-                自然と共生した<br />
-                未来を目指して。
-              </h3>
-            </article>
-
-
-            <div
-              class="purpose__middle"
-              data-aos="fade-up"
-            >
-              <p class="purpose__text purpose__middle--text">
-                もりうみfestivalは体験型の学習機会であり、
-                私たちが大切にすることは気候変動対応最前線の現場で活躍している人と出会い、
-                生の声を聞き、観て感じて、実際の作業をすることを通して
-                本物に触れる機会が重要だと考えています。
-              </p>
-            </div>
-
-
-            <div
-              class="purpose__bottom"
-              data-aos="fade-up"
-            >
-              <p class="purpose__text purpose__bottom--text">
-                第3回もりうみfestivalは、
-                天竜川の源流である諏訪湖周辺を舞台に開催します。
-                森や湖での体験を通して、
-                <span class="weight_bold">
-                  森・里・川・海
-                </span>
-                のつながりと、その環境を未来へつなぐための
-                私たちの責任と役割について考えます。
-              </p>
-            </div>
-
-
-            <!-- modal button -->
-            <button
-              class="openModal purpose-document"
-              data-pdf="./pdf/event-mokuteki.pdf"
-              type="button"
-            >
-              資料はこちら
-            </button>
-
-
-            <!-- modal -->
-            <div
-              id="modal"
-              class="modal"
-            >
-              <div class="modal-content">
-                <button
-                  class="close"
-                  type="button"
-                  aria-label="閉じる"
-                >
-                  &times;
-                </button>
-
-                <iframe
-                  id="pdfViewer"
-                  class="pdf-viewer"
-                  title="イベント資料"
-                ></iframe>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      </div>
-
-
-      <!-- ==================================================
-      DEEP GREEN AREA
-      =================================================== -->
-      <div class="deep-green__bg">
-
-        <!-- ==================================================
-        PLAN
-        =================================================== -->
-        <section class="plan">
-
-          <!-- decoration -->
-          <img
-            class="plan__bg-right"
-            src="./img/event/bg_plan-right.png"
-            alt=""
-          />
-
-          <img
-            class="plan__bg-left"
-            src="./img/event/bg_plan-left.png"
-            alt=""
-          />
-
-
-          <!-- banner -->
-          <img
-            class="plan__banner"
-            src="./img/event/banner1.png"
-            alt="抽選40組様を特別無料ご招待。一組2名様でイベント体験とホテルディナーバイキングが無料で楽しめる特別な2日間。"
-          />
-
-
-          <div
-            class="plan__wrapper"
-            data-aos="fade-up"
-          >
-            <h2 class="event__section-title">
-              内容
-            </h2>
-
-            <dl class="plan-info">
-
-              <div class="plan-list">
-                <dt>日程：</dt>
-
-                <dd>
-                  2026年10月17日（土）13:00〜
-                  10月18日（日）16:30
-                </dd>
-              </div>
-
-    
-
-              <div class="plan-list">
-                <dt>場所：</dt>
-
-                <dd>
-                  長野県 諏訪湖周辺
-              
-
-                  <p class="plan-add">
-                    （下諏訪町いずみ湖・諏訪湖周辺 ほか）
-                  </p>
-                </dd>
-              </div>
-
-
-              <div class="plan-list">
-                <dt>対象：</dt>
-                <dd>10歳以上</dd>
-              </div>
-
-            </dl>
-
-
-            <p class="plan-text">
-              第3回もりうみfestivalは、
-              天竜川の源流である諏訪湖地域を舞台に、
-              <span class="weight_bold">
-                「森・里・川・海」
-              </span>
-              のつながりを体験しながら学ぶイベントです。
-              <br /><br />
-
-              1日目は下諏訪町いずみ湖周辺で伐倒体験を実施。
-              森林環境に直接触れながら、
-              森の役割や自然環境について学びます。
-              <br /><br />
-
-              2日目の午前は、
-              諏訪湖でのカヤック・ヒシ刈り・資源循環を学ぶプログラムと、
-              諏訪湖遊覧・釜口水門を巡るバスツアーなどの
-              プログラムから選択して参加します。
-              <br /><br />
-
-              午後は、
-              カードゲームを通して脱炭素について楽しく学ぶ
-              「脱炭素ゲーム」と、
-              「気候変動と治水」「フェーズフリー」「流域循環共生圏」
-              をテーマにしたWater Scope Japanフォーラムから
-              選択して参加します。
-              <br /><br />
-
-              体験して、学んで、楽しみながら、
-              自然環境と私たちの暮らしのつながり、
-              そして未来のために一人ひとりが担う責任と役割について考える2日間です。
-            </p>
-
-          </div>
-        </section>
-
-
-        <!-- ==================================================
-        IMAGE SLIDER
-        =================================================== -->
-        <div class="images-slide">
-
-          <!-- top row -->
-          <ul class="images-slide__top-row">
-
-            <li class="images-slide__left">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image1.png"
-                alt="森を散策する様子"
-              />
-            </li>
-
-            <li class="images-slide__left">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image2.png"
-                alt="アマモの植栽をする様子"
-              />
-            </li>
-
-            <li class="images-slide__left">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image3.png"
-                alt="カードゲームをする子供たち"
-              />
-            </li>
-
-            <li class="images-slide__left">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image4.png"
-                alt="海中に生えるアマモ"
-              />
-            </li>
-
-            <li class="images-slide__left">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image5.png"
-                alt="海岸沿いに広がる街と湾の風景"
-              />
-            </li>
-
-
-            <!-- loop duplication -->
-            <li
-              class="images-slide__left"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image1.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__left"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image2.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__left"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image3.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__left"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image4.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__left"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image5.png"
-                alt=""
-              />
             </li>
 
           </ul>
 
-
-          <!-- bottom row -->
-          <ul class="images-slide__bottom-row">
-
-            <li class="images-slide__right">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image6.png"
-                alt="セミナーの様子"
-              />
-            </li>
-
-            <li class="images-slide__right">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image7.png"
-                alt="鳥居の向こうに沈む夕日"
-              />
-            </li>
-
-            <li class="images-slide__right">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image8.png"
-                alt="料理が並ぶテーブル"
-              />
-            </li>
-
-            <li class="images-slide__right">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image9.png"
-                alt="ホテルのディナーバイキング会場"
-              />
-            </li>
-
-            <li class="images-slide__right">
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image10.png"
-                alt="水辺で遊ぶ子供たち"
-              />
-            </li>
-
-
-            <!-- loop duplication -->
-            <li
-              class="images-slide__right"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image6.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__right"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image7.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__right"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image8.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__right"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image9.png"
-                alt=""
-              />
-            </li>
-
-            <li
-              class="images-slide__right"
-              aria-hidden="true"
-            >
-              <img
-                class="images-slide__img"
-                src="./img/top-event/image10.png"
-                alt=""
-              />
-            </li>
-
-          </ul>
         </div>
 
+      </nav>
 
-        <!-- ==================================================
-        SCHEDULE
-        =================================================== -->
-        <div class="schedule">
-          <div
-            class="schedule__wrapper"
-            data-aos="fade-up"
-          >
-            <img
-              class="schedule__img"
-              src="./img/event/schedule.png"
-              alt="イベントスケジュール"
-            />
-          </div>
-        </div>
+    </div>
+
+  </main>
+
+
+  <!-- ==================================================
+  FOOTER
+  =================================================== -->
+  <footer class="footer">
+
+    <div class="footer__wrapper">
+
+      <button
+        id="js-pageTop"
+        class="return-btn"
+        type="button"
+        aria-label="ページ上部へ戻る"
+      >
+
+        <img
+          class="return-btn__img"
+          src="./img/top/top-botan.png"
+          alt=""
+        />
+
+      </button>
+
+
+      <div class="footer-logo">
+
+        <img
+          class="footer-logo__img"
+          src="./img/top/footer-logo.svg"
+          alt="つなげよう、支えよう 森里川海"
+        />
 
       </div>
 
 
-      <!-- ==================================================
-      COURSE AREA
-      =================================================== -->
-      <div class="thin-brown__bg">
-
-        <!-- decoration -->
-        <img
-          class="course__bg-left"
-          src="./img/event/course__bg-left.png"
-          alt=""
-        />
+      <a
+        id="js-cta"
+        class="footer-cta"
+        href="https://peatix.com/event/4592663/view"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
 
         <img
-          class="course__bg-right"
-          src="./img/event/course__bg-right.png"
-          alt=""
+          class="footer-cta__img"
+          src="./img/top/cta-2_end.png"
+          alt="イベントのお申込みはこちら"
         />
 
-
-        <section class="course">
-          <div class="course__wrapper">
-
-            <h2 class="event__section-title course__title">
-              体験プログラム
-            </h2>
-
-
-            <div class="course__container">
-
-              <!-- A -->
-              <section class="course__contents">
-                <img
-                  class="course__contents--img"
-                  src="./img/top-event/taikenn-img1.png"
-                  alt="森での伐倒体験"
-                />
-
-                <h3 class="course__contents--title">
-                  Ａ．森の伐倒体験
-
-                  <p class="course__contents--subtitle">
-                    森を体験し、森を知る
-                  </p>
-                </h3>
-
-                <p class="course__contents--text">
-                  下諏訪町いずみ湖周辺の森で伐倒体験を行います。
-                  実際の森林環境に触れながら、
-                  森の役割や自然環境について学びます。
-                </p>
-              </section>
-
-
-              <!-- B -->
-              <section class="course__contents course__contents--bg1">
-                <img
-                  class="course__contents--img"
-                  src="./img/top-event/image11.png"
-                  alt="諏訪湖アクティビティ"
-                />
-
-                <h3 class="course__contents--title">
-                  Ｂ．諏訪湖アクティビティ
-                </h3>
-
-                <p class="course__contents--text">
-                  諏訪湖でカヤックやヒシ刈りを体験します。
-                  湖の環境に直接触れながら、
-                  自然環境と資源循環について学びます。
-                </p>
-              </section>
-
-
-              <!-- C -->
-              <section class="course__contents course__contents--bg2">
-                <img
-                  class="course__contents--img"
-                  src="./img/top-event/image12.png"
-                  alt="諏訪湖と水環境"
-                />
-
-                <h3 class="course__contents--title">
-                  Ｃ．諏訪湖・釜口水門<br />
-                  視察ツアー
-                </h3>
-
-                <p class="course__contents--text">
-                  諏訪湖を遊覧し、釜口水門を巡るバスツアーを実施。
-                  諏訪湖と天竜川のつながりや資源循環について学びます。
-                </p>
-              </section>
-
-
-              <!-- D -->
-              <section class="course__contents course__contents--bg2">
-                <img
-                  class="course__contents--img"
-                  src="./img/top-event/taikenn-img4.png"
-                  alt="脱炭素ゲーム"
-                />
-
-                <h3 class="course__contents--title">
-                  D．脱炭素ゲーム
-                </h3>
-
-                <p class="course__contents--text">
-                  カードゲームを通して「脱炭素」について楽しく学ぶ
-                  体験型プログラムです。
-                  参加者同士で考えながら、
-                  持続可能な未来への理解を深めます。
-                </p>
-              </section>
-
-
-              <!-- E -->
-              <section class="course__contents course__contents--bg2">
-                <img
-                  class="course__contents--img"
-                  src="./img/top-event/image6.png"
-                  alt="Water Scope Japanフォーラム"
-                />
-
-                <h3 class="course__contents--title">
-                  E．Water Scope Japanフォーラム
-                </h3>
-
-                <p class="course__contents--text">
-                  「気候変動と治水」「フェーズフリー」
-                  「流域循環共生圏」をテーマに、
-                  これからの地域と水環境について学ぶフォーラムです。
-                </p>
-              </section>
-
-            </div>
-          </div>
-
-
-          <!-- preparation -->
-          <section class="preparation">
-            <div
-              class="preparation__wrapper"
-              data-aos="fade-zoom-in"
-              data-aos-duration="5000"
-            >
-              <h4 class="preparation__title">
-                コースの服装・持ち物について
-              </h4>
-
-              <p class="preparation__text">
-                服装：動きやすい服装 / 運動靴 ｜
-                持ち物：タオル / 水筒 / 雨具 / 保険証の写し
-              </p>
-
-              <p class="preparation__text--sp">
-                服装：動きやすい服装 / 運動靴
-                <br />
-                持ち物：タオル / 水筒 / 雨具 / 保険証の写し
-              </p>
-            </div>
-          </section>
-
-        </section>
-      </div>
-
-
-      <!-- ==================================================
-      DEEP BROWN AREA
-      =================================================== -->
-      <div class="deep-brown__bg">
-
-        <!-- ==================================================
-        DINNER
-        =================================================== -->
-        <div class="area-map">
-
-          <!-- decoration -->
-          <img
-            class="area-map__bg-left"
-            src="./img/event/map__bg-left.png"
-            alt=""
-          />
-
-          <img
-            class="area-map__bg-right"
-            src="./img/event/map__bg-right.png"
-            alt=""
-          />
-
-
-          <div
-            class="area-map__wrapper"
-            data-aos="fade-up"
-          >
-            <h2 class="event__section-title area-map__title">
-              イベント後はホテルディナーバイキングを
-              <br class="area-map__sp-br" />
-              お楽しみください
-            </h2>
-
-            <img
-              class="area-map__img"
-              src="./img/event/dinner.png"
-              alt="ホテルのディナーバイキング"
-            />
-          </div>
-        </div>
-
-
-        <!-- ==================================================
-        MENU
-        =================================================== -->
-        <nav class="menu">
-          <div class="menu__wrapper">
-
-            <!-- decoration -->
-            <img
-              class="menu__bg-left"
-              src="./img/event/image12.png"
-              alt=""
-            />
-
-            <img
-              class="menu__bg-right"
-              src="./img/event/menu__bg-right.png"
-              alt=""
-            />
-
-
-            <ul class="menu-list">
-
-              <li class="menu__list-item menu-event">
-                <a href="event.html">
-                  イベントについて
-                </a>
-              </li>
-
-              <li class="menu__list-item menu-sponsor">
-                <a href="sponsor.html">
-                  スポンサー紹介
-                </a>
-              </li>
-
-              <li class="menu__list-item menu-contact">
-                <a
-                  href="https://peatix.com/event/4592663/view"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  応募申込みは<br />
-                  こちら
-                </a>
-              </li>
-
-            </ul>
-          </div>
-        </nav>
-
-      </div>
-    </main>
-
-
-    <!-- ==================================================
-    FOOTER
-    =================================================== -->
-    <footer class="footer">
-      <div class="footer__wrapper">
-
-        <button
-          id="js-pageTop"
-          class="return-btn"
-          type="button"
-          aria-label="ページ上部へ戻る"
-        >
-          <img
-            class="return-btn__img"
-            src="./img/top/top-botan.png"
-            alt=""
-          />
-        </button>
-
-
-        <div class="footer-logo">
-          <img
-            class="footer-logo__img"
-            src="./img/top/footer-logo.svg"
-            alt="つなげよう、支えよう 森里川海"
-          />
-        </div>
-
-
-        <a
-          id="js-cta"
-          class="footer-cta"
-          href="https://peatix.com/event/4592663/view"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="footer-cta__img"
-            src="./img/top/cta-2_end.png"
-            alt="イベントのお申込みはこちら"
-          />
-        </a>
-      </div>
-
-
-      <p class="copyright">
-        &copy; 一般社団法人諏訪広域脱炭素イノベーション協会
-      </p>
-
-
-      <!-- decoration -->
-      <div class="footer-fish" aria-hidden="true">
-        <img
-          class="footer-fish__img14"
-          src="./img/top/footer-fish14.png"
-          alt=""
-        />
-
-        <img
-          class="footer-fish__img15"
-          src="./img/top/footer-fish15.png"
-          alt=""
-        />
-
-        <img
-          class="footer-fish__img16"
-          src="./img/top/footer-fish16.png"
-          alt=""
-        />
-
-        <img
-          class="footer-fish__img17"
-          src="./img/top/footer-fish17.png"
-          alt=""
-        />
-
-        <img
-          class="footer-fish__img18"
-          src="./img/top/footer-fish18.png"
-          alt=""
-        />
-      </div>
-    </footer>
-
-
-    <!-- ==================================================
-    SCRIPT
-    =================================================== -->
-
-    <!-- aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- jquery -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- site js -->
-    <script src="./js/main.js"></script>
-    <script src="./js/event.js"></script>
-
-    <script>
-      AOS.init({
-        offset: 100,
-        delay: 0,
-        duration: 2000,
-        easing: "ease-out",
-        anchorPlacement: "bottom-top",
-        once: false,
-      });
-    </script>
-  </body>
+      </a>
+
+    </div>
+
+
+    <p class="copyright">
+      &copy; 一般社団法人諏訪広域脱炭素イノベーション協会
+    </p>
+
+
+    <div
+      class="footer-fish"
+      aria-hidden="true"
+    >
+
+      <img
+        class="footer-fish__img14"
+        src="./img/top/footer-fish14.png"
+        alt=""
+      />
+
+      <img
+        class="footer-fish__img15"
+        src="./img/top/footer-fish15.png"
+        alt=""
+      />
+
+      <img
+        class="footer-fish__img16"
+        src="./img/top/footer-fish16.png"
+        alt=""
+      />
+
+      <img
+        class="footer-fish__img17"
+        src="./img/top/footer-fish17.png"
+        alt=""
+      />
+
+      <img
+        class="footer-fish__img18"
+        src="./img/top/footer-fish18.png"
+        alt=""
+      />
+
+    </div>
+
+  </footer>
+
+
+  <!-- ==================================================
+  SCRIPT
+  =================================================== -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/event.js"></script>
+
+  <script>
+    AOS.init({
+      offset: 100,
+      delay: 0,
+      duration: 2000,
+      easing: "ease-out",
+      anchorPlacement: "bottom-top",
+      once: false,
+    });
+  </script>
+
+</body>
 </html>
