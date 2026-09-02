@@ -190,7 +190,7 @@ MAIN VISUAL
   height: 98%;
   position: relative;
   left: 0;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .main-visual__img {
@@ -748,12 +748,11 @@ Tablet / Smartphone
   }
 
   .main-visual {
-    left: -64px;
     margin-bottom: 60px;
   }
 
   .main-visual__img {
-    width: 135%;
+    width: 100%;
   }
 
   .main-title {
