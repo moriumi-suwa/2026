@@ -3,6 +3,14 @@
 /* ==================================================
 共通
 ====================================================*/
+.catch{
+  font-size:1.8rem;
+  font-weight: 800;
+  padding: 30px;
+  letter-spacing: 2px;
+  color: Ffff;
+}
+
 .over_view_inner {
   padding-top: 64px;
   
@@ -24,6 +32,69 @@
   font-weight: 700;
   font-size: 1.5rem;
   padding: 16px 0px;
+
+}
+
+.center{
+  text-align: center;
+}
+/* イベントについて */
+.event_title {
+  width: 100%;
+  margin: 0 0 35px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.event_title img {
+  display: block;
+  width: 520px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* 日程・場所・対象 */
+.event_gaiyo {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 24px 30px;
+  box-sizing: border-box;
+
+}
+
+.event_gaiyo img {
+  display: block;
+  width: 620px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+  .event_title {
+    margin-bottom: 25px;
+  }
+
+  .event_title img {
+    width: 100px;
+    max-width: 85%;
+  }
+
+  .event_gaiyo {
+    margin-bottom: 45px;
+  }
+
+  .event_gaiyo img {
+    width: 600px;
+    max-width: 95%;
+  }
 }
 
 

@@ -322,14 +322,23 @@ OVERVIEW
   height: auto;
   padding: 162px 88px;
   background: url(../img/top/overview_bg.png) no-repeat top / 100% 100%;
-  font-size: 1.2rem;
-  line-height: 2.2;
+  font-size: 1.3rem;
+
+  text-align:center;
+
+}
+
+.top-overview__wrapper  p{
+  text-align: left;
+  letter-spacing: 3px;
+  line-height: 2.5;
 }
 
 .top-overview__title--img {
   position: absolute;
   top: -20px;
   left: -17px;
+  width: 75%;
 }
 
 .top-overview__subtitle--img1,
@@ -774,6 +783,8 @@ Tablet / Smartphone
   .top-overview__bg-left1-1 {
     display: none;
   }
+
+  
 
   .top-overview__bg-left2 {
     width: 200px;
