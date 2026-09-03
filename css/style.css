@@ -71,8 +71,7 @@
 
 .event_gaiyo img {
   display: block;
-  width: 620px;
-  max-width: 100%;
+  max-width: 105%;
   height: auto;
   margin: 0 auto;
 }
@@ -98,6 +97,7 @@
 
   .catch{
     text-align: center;
+    font-size:1.2rem;
   }
 
 

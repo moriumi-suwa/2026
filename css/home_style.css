@@ -740,13 +740,12 @@ Tablet / Smartphone
       url(../img/top/sp_river_1_0.png) no-repeat 80% 568px / 200% 102%,
       url(../img/top/bg_green1-new.png) repeat center / cover;
   }
-
   .main-visual {
- 
+    height: 90svh;
   }
 
   .main-visual__img {
-    width: 100%;
+    width: 90%;
   }
 
   .main-title {
@@ -943,7 +942,7 @@ Tablet / Smartphone
   }
 
   .experience__container--title {
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 0.2em;
     text-align: center;
   }
@@ -962,7 +961,7 @@ Tablet / Smartphone
   }
 
   .experience__container--text {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 20px;
   }
 
