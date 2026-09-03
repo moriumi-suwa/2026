@@ -185,7 +185,8 @@ PURPOSE MODAL
   bottom: 50px;
   left: 50%;
   display: block;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: 0.2em;
   text-align: center;
   background: url(../img/event/bg_kuwashiku.png) no-repeat center / 100% 100%;
