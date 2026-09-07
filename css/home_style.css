@@ -187,14 +187,6 @@ MAIN VISUAL
 
 
 
-.main-visual__img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  margin: 0 auto;
-}
-
 .main-title {
   width: 29%;
   position: absolute;
@@ -314,7 +306,7 @@ OVERVIEW
   max-width: 900px;
   width: 100%;
   height: auto;
-  padding: 162px 88px;
+  padding: 128px 88px;
   background: url(../img/top/overview_bg.png) no-repeat top / 100% 100%;
   font-size: 1.3rem;
 
@@ -330,14 +322,13 @@ OVERVIEW
 
 .top-overview__title--img {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: -17px;
-  width: 75%;
 }
 
 .top-overview__subtitle--img1,
 .top-overview__subtitle--img2 {
-  width: 70%;
+ 
   margin-bottom: 20px;
 }
 
@@ -741,13 +732,11 @@ Tablet / Smartphone
       url(../img/top/bg_green1-new.png) repeat center / cover;
   }
   .main-visual {
-    height: 90svh;
+    height: 80svh;
+    margin-top: -60px;
   }
 
-  .main-visual__img {
-    width: 90%;
-  }
-
+  
   .main-title {
     width: 44%;
     left: 56%;
@@ -839,7 +828,7 @@ Tablet / Smartphone
   }
 
   .top-overview__text {
-    font-size: 16px;
+    font-size: 17px;
   }
 
 
@@ -999,7 +988,7 @@ Tablet / Smartphone
   }
 
   .menu__list-item {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.05em;
   }
 
@@ -1091,6 +1080,6 @@ Small Smartphone
   }
 
   .menu-contact {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
