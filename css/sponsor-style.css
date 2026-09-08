@@ -72,38 +72,19 @@ sponsor
 .sponsor-logo__img {
   width: 100%;
 }
-.special-supporter-sala__logo {
-  width: 428px;
-}
-.special-supporter__logo {
-  width: 190px;
-}
-.hamamatsu-photonics__logo {
-  width: 300px;
-}
-.special-supporter__list {
-  font-size: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: end;
-  gap: 24px 54px;
-}
-.local-supporter__list {
-  font-size: 34px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px 54px;
-}
+
+/* スポンサー名リスト（共通レイアウト・文字サイズ） */
+.special-supporter__list,
+.local-supporter__list,
 .supporter__list,
 .cooperation__list {
-  font-size: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px 54px;
+  gap: 20px 50px;
+  font-size: 24px;
 }
+
 .cooperation__name--img {
   width: 100px;
 }
@@ -115,27 +96,13 @@ sponsor
   .sponsor {
     gap: 20px;
   }
-  .special-supporter__logo {
-    width: 163px;
-  }
-  .special-supporter-sala__logo {
-    width: 388px;
-  }
-  .special-supporter__list {
-    font-size: 36px;
-    gap: 20px 50px;
-  }
-  .hamamatsu-photonics__logo {
-    width: 284px;
-  }
-  .local-supporter__list {
-    font-size: 32px;
-    gap: 20px 50px;
-  }
+
+  .special-supporter__list,
+  .local-supporter__list,
   .supporter__list,
   .cooperation__list {
-    font-size: 28px;
-    gap: 22px 52px;
+    font-size: 22px;
+    gap: 18px 44px;
   }
 }
 
@@ -143,27 +110,13 @@ sponsor
   .sponsor {
     gap: 10px;
   }
-  .special-supporter-sala__logo {
-    width: 320px;
-  }
-  .special-supporter__logo {
-    width: 144px;
-  }
-  .hamamatsu-photonics__logo {
-    width: 244px;
-  }
-  .special-supporter__list {
-    font-size: 32px;
-    gap: 18px 36px;
-  }
-  .local-supporter__list {
-    font-size: 28px;
-    gap: 18px 36px;
-  }
+
+  .special-supporter__list,
+  .local-supporter__list,
   .supporter__list,
   .cooperation__list {
-    font-size: 24px;
-    gap: 20px 50px;
+    font-size: 18px;
+    gap: 14px 32px;
   }
   .cooperation__name--img {
     width: 72px;
