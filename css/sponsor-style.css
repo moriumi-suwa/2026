@@ -45,81 +45,111 @@ body {
 }
 
 /* =====================================
-sponsor
+sponsor-table（主催〜協力までの一覧）
 =======================================*/
-.sponsor__ttl {
-  font-size: 26px;
+.sponsor-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  border-collapse: separate;
+  border-spacing: 0 20px;
   color: #fff;
+}
+.sponsor-table th {
+  width: 160px;
+  background-color: #3f6b4a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 30px;
+  vertical-align: middle;
+  padding: 10px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
-
-.sponsor {
-  max-width: 1400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 0 20px;
-  margin: 0 auto 200px;
+.sponsor-table td {
+  padding-left: 28px;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 1.9;
 }
-.sponsor-logo {
-  max-width: 400px;
+.sponsor-table td ul {
+  list-style: none;
+}
+.sponsor-table td ul li {
+  position: relative;
+  padding-left: 1em;
+  display: inline;
+}
+.sponsor-table td ul li::before {
+  content: "・";
+}
+.sponsor-table__logo {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-.sponsor-logo__img {
-  width: 100%;
-}
-
-/* スポンサー名リスト（共通レイアウト・文字サイズ） */
-.special-supporter__list,
-.local-supporter__list,
-.supporter__list,
-.cooperation__list {
-  display: flex;
+  gap: 40px;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px 50px;
-  font-size: 24px;
 }
-
-.cooperation__name--img {
-  width: 100px;
+.sponsor-table__logo img {
+  width: 160px;
 }
-.alert {
-  text-align: center;
+.sponsor-table__note {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.sponsor-table__footnote {
+  max-width: 1000px;
+  margin: 0 auto 200px;
+  padding: 0 20px;
+  font-size: 13px;
+  text-align: right;
+  color: #fff;
 }
 
 @media (max-width: 1024px) {
-  .sponsor {
-    gap: 20px;
+  .sponsor-table {
+    padding: 0 20px;
   }
-
-  .special-supporter__list,
-  .local-supporter__list,
-  .supporter__list,
-  .cooperation__list {
-    font-size: 22px;
-    gap: 18px 44px;
+  .sponsor-table th {
+    width: 130px;
+    font-size: 15px;
+  }
+  .sponsor-table td {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .sponsor {
-    gap: 10px;
+  .sponsor-table,
+  .sponsor-table tbody,
+  .sponsor-table tr,
+  .sponsor-table th,
+  .sponsor-table td {
+    display: block;
+    width: auto;
   }
-
-  .special-supporter__list,
-  .local-supporter__list,
-  .supporter__list,
-  .cooperation__list {
-    font-size: 18px;
-    gap: 14px 32px;
+  .sponsor-table {
+    padding: 0 20px;
+    border-spacing: 0;
   }
-  .cooperation__name--img {
-    width: 72px;
+  .sponsor-table tr {
+    margin-bottom: 24px;
+  }
+  .sponsor-table th {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 16px;
+  }
+  .sponsor-table td {
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .sponsor-table__logo img {
+    width: 120px;
+  }
+  .sponsor-table__footnote {
+    padding: 0 20px;
+    margin-bottom: 120px;
   }
 }
 
