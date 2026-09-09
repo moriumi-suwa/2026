@@ -794,11 +794,12 @@ Tablet / Smartphone
     max-width: 700px;
     padding: 88px 32px;
     text-align: center;
+    
   }
 
   .top-overview__wrapper p {
     line-height: 1.8;
-    
+    font-size: 18px;
   }
 
   .top-overview__title {
