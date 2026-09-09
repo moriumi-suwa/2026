@@ -14,34 +14,7 @@ body {
   overflow: hidden;
 }
 .event-top {
-  max-width: 100%;
-  padding-top: 140px;
   margin-bottom: 500px;
-}
-.event-top__title {
-  max-width: 440px;
-  width: 100%;
-  margin: 0 auto;
-}
-.event-top__title--img {
-  width: 100%;
-}
-.event-top__subtitle {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 50px;
-  margin-bottom: 100px;
-}
-
-@media (max-width: 768px) {
-  .event-top__title {
-    width: 90%;
-  }
-  .event-top__subtitle {
-    font-size: 26px;
-    margin-bottom: 80px;
-  }
 }
 
 /* =====================================
@@ -165,57 +138,11 @@ menu
   margin-top: -250px;
 }
 .menu__wrapper {
-  width: 100%;
-  position: relative;
   padding: 230px 20px 300px;
-  margin: 0 auto;
-}
-.menu-list {
-  max-width: 680px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-align: center;
-  margin: 0 auto;
-}
-.menu__list-item {
-  max-width: 300px;
-  width: 40%;
-  height: 130px;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-  color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-.menu-event {
-  background: url(../img/top/menu-botan-bg1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .menu-sponsor {
-  background: url(../img/top/menu-botan-bg2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
   z-index: 1;
-}
-.menu-contact {
-  width: 50%;
-  height: 150px;
-  font-size: 26px;
-  line-height: 1.6;
-  background: url(../img/top/menu-botan-bg3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @media (max-width: 768px) {
@@ -223,18 +150,10 @@ menu
     padding: 100px 20px 200px;
     margin: 0 auto;
   }
-  .menu-list {
-    column-gap: 40px;
-    row-gap: 20px;
-  }
   .menu__list-item {
     font-size: 16px;
     height: 100px;
     letter-spacing: 0.05em;
-  }
-  .menu-contact {
-    height: 120px;
-    font-size: 20px;
   }
 }
 @media (max-width: 570px) {

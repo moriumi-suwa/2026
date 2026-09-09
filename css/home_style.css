@@ -176,61 +176,19 @@ MAIN VISUAL
     url(../img/top/bg_green1-new.png) repeat center / cover;
 }
 
-.top-river {
-  width: 70%;
-  position: absolute;
-  top: 900px;
-  left: -200px;
-}
-
-.main-title {
-  width: 29%;
-  position: absolute;
-  top: 38%;
-  left: 52%;
-  opacity: 0;
-  transform: translateX(-50%);
-}
-
-.main-title.visible {
-  opacity: 1;
-  transition: opacity 2s ease-in-out;
-}
-
 
 /* ==================================================
-SPONSOR
+SPONSOR - HOME OVERRIDE
 ==================================================== */
 .partner {
-  margin: -12px auto 24px;
-  font-size: 18px;
-  letter-spacing: 0.15em;
-  text-align: center;
   position: relative;
-z-index: 100;
+  margin: -12px auto 24px;
+  z-index: 100;
 }
 
 .sponsor {
-  max-width: 1400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 0 20px;
   margin: 0 auto 200px;
 }
-
-.sponsor-logo {
-  max-width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sponsor-logo__img {
-  width: 100%;
-}
-
 
 /* ==================================================
 OVERVIEW
@@ -321,26 +279,13 @@ OVERVIEW
   position: absolute;
   top: -30px;
   left: -17px;
+  width: 80%;
 }
 
 .top-overview__subtitle--img1,
 .top-overview__subtitle--img2 {
   margin-bottom: 20px;
   width: 85%;
-}
-
-.top-overview__text--theme {
-  display: block;
-  font-size: 20px;
-}
-
-.top-overview__text {
-  position: relative;
-  top: 104px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.15em;
 }
 
 
@@ -389,7 +334,7 @@ EVENT DETAILS
 }
 
 .event-details__title-img {
-  width: 100%;
+  width: 80%;
   padding-right: 40px;
   margin-bottom: 30px;
 }
@@ -545,7 +490,7 @@ EVENT
   margin-bottom: 30px;
 }
 
-.event-title img {
+.event-title__img {
   width: 30%;
 }
 
@@ -625,10 +570,7 @@ MENU
 }
 
 .menu__wrapper {
-  width: 100%;
-  position: relative;
   padding: 200px 20px 300px;
-  margin: 0 auto;
 }
 
 .menu__bg-right {
@@ -663,55 +605,6 @@ MENU
   width: 100%;
 }
 
-.menu-list {
-  max-width: 680px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.menu__list-item {
-  max-width: 300px;
-  width: 40%;
-  height: 130px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-}
-
-.menu-event,
-.menu-sponsor,
-.menu-contact {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.menu-event {
-  background-image: url(../img/top/menu-botan-bg1.png);
-}
-
-.menu-sponsor {
-  background-image: url(../img/top/menu-botan-bg2.png);
-}
-
-.menu-contact {
-  width: 50%;
-  height: 150px;
-  background-image: url(../img/top/menu-botan-bg3.png);
-  font-size: 26px;
-  line-height: 1.6;
-}
-
 
 /* ==================================================
 RESPONSIVE
@@ -733,26 +626,10 @@ Tablet / Smartphone
     margin-top: -60px;
   }
 
-  .main-title {
-    width: 48%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-
-  /* Sponsor
+/* Sponsor
   ------------------------------------------------ */
-  .partner {
-    font-size: 14px;
-  }
-
   .sponsor {
-    gap: 10px;
     margin-bottom: 255px;
-  }
-
-  .sponsor-logo {
-    width: 250px;
   }
 
 
@@ -802,26 +679,16 @@ Tablet / Smartphone
     font-size: 18px;
   }
 
-  .top-overview__title {
+  .top-overview__title--img {
     width: 65%;
   }
 
-  .top-overview__subtitle--img1,
+.top-overview__subtitle--img1,
   .top-overview__subtitle--img2 {
  
   }
 
-  .top-overview__text--theme {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  .top-overview__text {
-    font-size: 17px;
-  }
-
-
-  /* Event Details
+/* Event Details
   ------------------------------------------------ */
   .deep-green__bg {
     background:
@@ -911,14 +778,9 @@ Tablet / Smartphone
     z-index: 1;
   }
 
-  .event-title {
-    width: 46%;
-    padding-top: 30px;
-    margin: 0 auto 30px;
-  }
 
-  .event-title img {
-    width: 100%;
+  .event-title__img {
+    width: 65%;
   }
 
   .experience-left,
@@ -1002,19 +864,9 @@ Tablet / Smartphone
     left: -50px;
   }
 
-  .menu-list {
-    column-gap: 40px;
-    row-gap: 20px;
-  }
-
   .menu__list-item {
     font-size: 18px;
     letter-spacing: 0.05em;
-  }
-
-  .menu-contact {
-    height: 120px;
-    font-size: 20px;
   }
 }
 
@@ -1040,16 +892,7 @@ Small Smartphone
     display: none;
   }
 
-  .top-overview__subtitle--img3 {
-    width: 70%;
-  }
-
-  .top-overview__text {
-    font-size: 13px;
-  }
-
-
-  /* Menu
+/* Menu
   ------------------------------------------------ */
   .menu-title {
     width: 36%;
@@ -1073,3 +916,53 @@ Small Smartphone
     font-size: 18px;
   }
 }
+
+/* ==================================================
+HOME COMMON CONTENT
+旧 style.css からTOPページ固有分を統合
+==================================================== */
+.catch {
+  padding: 30px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.main-visual {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url(../img/top/yatsugatake.png) no-repeat center / cover;
+}
+
+.banner_150 {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .catch {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .banner_150 {
+    width: 90vw;
+    max-width: none;
+    right: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .banner_150 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+

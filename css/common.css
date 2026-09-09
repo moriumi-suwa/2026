@@ -145,7 +145,7 @@ header
 }
 .navigation__list {
   text-align: left;
-  padding-left: 40px;
+  padding-left: 30px;
 }
 .navigation__link {
   font-size: 17px;
@@ -302,13 +302,7 @@ footer
     bottom: -150px;
   }
 
-  .footer__list {
-    padding-top: 4%;
-  }
-  .footer__list-item {
-    padding-bottom: 10px;
-  }
-  .footer-cta {
+.footer-cta {
     width: 100%;
   }
   .footer-cta__img {
@@ -371,3 +365,208 @@ footer
     top: -78px;
   }
 }
+
+/* ==================================================
+SHARED PAGE COMPONENTS
+TOP / EVENT / SPONSOR 共通
+==================================================== */
+
+/* EVENT TOP -------------------------------------------------- */
+.event-top {
+  max-width: 100%;
+  padding-top: 140px;
+}
+
+.event-top__title {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.event-top__title--img {
+  width: 100%;
+}
+
+.event-top__subtitle {
+  padding-top: 50px;
+  margin-bottom: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* SPECIAL PARTNER -------------------------------------------------- */
+.partner {
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.sponsor {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.sponsor-logo {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-logo__img {
+  width: 100%;
+}
+
+/* EVENT OVERVIEW -------------------------------------------------- */
+.event_gaiyo {
+  width: 100%;
+  margin-bottom: 45px;
+  padding: 45px;
+  box-sizing: border-box;
+  background-color: #7f8047;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.event_gaiyo h3 {
+  display: inline-block;
+  padding: 3px 12px;
+  margin-bottom: 20px;
+  background-color: #f7f7ef;
+  border-radius: 3px;
+  color: #544c05;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.event_gaiyo span {
+  font-size: small;
+}
+
+/* MENU -------------------------------------------------- */
+.menu__wrapper {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.menu-list {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu__list-item {
+  max-width: 300px;
+  width: 40%;
+  height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.menu-event,
+.menu-sponsor,
+.menu-contact {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.menu-event {
+  background-image: url(../img/top/menu-botan-bg1.png);
+}
+
+.menu-sponsor {
+  background-image: url(../img/top/menu-botan-bg2.png);
+}
+
+.menu-contact {
+  width: 50%;
+  height: 150px;
+  background-image: url(../img/top/menu-botan-bg3.png);
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .event-top__title {
+    width: 90%;
+  }
+
+  .event-top__subtitle {
+    margin-bottom: 80px;
+    font-size: 26px;
+  }
+
+  .partner {
+    font-size: 14px;
+  }
+
+  .sponsor {
+    gap: 10px;
+  }
+
+  .sponsor-logo {
+    width: 250px;
+  }
+
+  .event_gaiyo {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+  }
+
+  .event_gaiyo h3 {
+    display: block;
+    padding: 6px 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #7f8047;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 3px;
+  }
+
+  .event_gaiyo p {
+    line-height: 1.8;
+  }
+
+  .menu-list {
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  .menu-contact {
+    height: 120px;
+    font-size: 20px;
+  }
+}
+
