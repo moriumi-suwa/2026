@@ -67,7 +67,7 @@
   border-radius: 32px;
   padding: 45px;
   box-sizing: border-box;
-  font-weight: 700;
+  font-weight: 500;
   background-color: #7f8047;
   color: #fff;
   line-height: 2;
@@ -154,21 +154,22 @@
     background-color: transparent;
     line-height: 1.6;
     letter-spacing: 1px;
-    font-size: 21px;
+    font-size: 18px;
   }
 
 
   .event_gaiyo h3 {
     display: block;
     font-weight: 700;
-    background-color: #b0b05a;
-    color: #544c05;
-    font-size: px;
-    padding: 6px;
+    background-color: #7f8047;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 12px;
     border-radius: 3px;
     margin-top: 8px;
     margin-bottom: 8px;
     line-height: 1.6;
+    letter-spacing: 3px;
 
   }
 
