@@ -302,7 +302,7 @@ OVERVIEW
 
 /* Content
 -------------------------------------------------- */
-.top-overview__wrapper {
+.r {
   max-width: 900px;
   width: 100%;
   padding: 128px 88px;
@@ -798,12 +798,12 @@ Tablet / Smartphone
   }
 
   .top-overview__wrapper p {
-    line-height: 1.8;
+    line-height: 1.6;
     font-size: 18px;
   }
 
   .top-overview__title {
-    width: 65%;
+    width: 80%;
   }
 
   .top-overview__subtitle--img1,
