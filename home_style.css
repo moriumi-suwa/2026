@@ -2,7 +2,7 @@
 
 /* ==================================================
 BASE
-====================================================*/
+==================================================== */
 body {
   display: flex;
   flex-direction: column;
@@ -13,12 +13,10 @@ body {
 
 /* ==================================================
 LOADING
-====================================================*/
+==================================================== */
 .loading-overlay {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,8 +28,8 @@ LOADING
 .col-md-4 {
   min-height: 10em;
   position: relative;
-  text-align: center;
   padding: 0;
+  text-align: center;
   transform: translateZ(1px);
 }
 
@@ -98,7 +96,7 @@ LOADING
 
 /* ==================================================
 LOADING ANIMATION
-====================================================*/
+==================================================== */
 @keyframes loading7drop {
   0% {
     opacity: 0;
@@ -169,13 +167,13 @@ LOADING ANIMATION
 
 /* ==================================================
 MAIN VISUAL
-====================================================*/
+==================================================== */
 .green__bg {
   width: 100%;
+  overflow: hidden;
   background:
     url(../img/top/bg_river_new1.png) no-repeat 137% 975px / 190% 67%,
     url(../img/top/bg_green1-new.png) repeat center / cover;
-  overflow: hidden;
 }
 
 .top-river {
@@ -184,8 +182,6 @@ MAIN VISUAL
   top: 900px;
   left: -200px;
 }
-
-
 
 .main-title {
   width: 29%;
@@ -204,12 +200,14 @@ MAIN VISUAL
 
 /* ==================================================
 SPONSOR
-====================================================*/
+==================================================== */
 .partner {
+  margin: -12px auto 24px;
   font-size: 18px;
   letter-spacing: 0.15em;
   text-align: center;
-  margin-bottom: 30px;
+  position: relative;
+z-index: 100;
 }
 
 .sponsor {
@@ -225,8 +223,8 @@ SPONSOR
 .sponsor-logo {
   max-width: 400px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .sponsor-logo__img {
@@ -236,19 +234,20 @@ SPONSOR
 
 /* ==================================================
 OVERVIEW
-====================================================*/
+==================================================== */
 .top-overview {
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
-  text-align: center;
   padding: 0 20px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
-/* decoration */
+/* Decoration
+-------------------------------------------------- */
 .top-overview__bg-left1 {
   width: 250px;
   position: absolute;
@@ -301,36 +300,33 @@ OVERVIEW
 }
 
 
-/* content */
+/* Content
+-------------------------------------------------- */
 .top-overview__wrapper {
   max-width: 900px;
   width: 100%;
-  height: auto;
-  padding: 162px 88px;
+  padding: 128px 88px;
   background: url(../img/top/overview_bg.png) no-repeat top / 100% 100%;
   font-size: 1.3rem;
-
-  text-align:center;
-
+  text-align: center;
 }
 
-.top-overview__wrapper  p{
-  text-align: left;
-  letter-spacing: 3px;
+.top-overview__wrapper p {
   line-height: 2.5;
+  letter-spacing: 3px;
+  text-align: left;
 }
 
 .top-overview__title--img {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: -17px;
-  width: 75%;
 }
 
 .top-overview__subtitle--img1,
 .top-overview__subtitle--img2 {
-  width: 70%;
   margin-bottom: 20px;
+  width: 85%;
 }
 
 .top-overview__text--theme {
@@ -341,19 +337,20 @@ OVERVIEW
 .top-overview__text {
   position: relative;
   top: 104px;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.15em;
-  margin-bottom: 20px;
 }
 
 
-/* Instagram */
+/* Instagram
+-------------------------------------------------- */
 .instagram {
   position: relative;
-  text-align: center;
   padding: 20px 0;
   margin: 40px 0 500px;
+  text-align: center;
 }
 
 .instagram-mark {
@@ -374,7 +371,7 @@ OVERVIEW
 
 /* ==================================================
 EVENT DETAILS
-====================================================*/
+==================================================== */
 .deep-green__bg {
   width: 100%;
   padding-bottom: 500px;
@@ -433,17 +430,13 @@ EVENT DETAILS
   }
 
   to {
-    transform: translateX(
-      calc(-1 * (400px * 6 + 10px * 12))
-    );
+    transform: translateX(calc(-1 * (400px * 6 + 10px * 12)));
   }
 }
 
 @keyframes scroll-right {
   from {
-    transform: translateX(
-      calc(-1 * (400px * 6 + 10px * 12))
-    );
+    transform: translateX(calc(-1 * (400px * 6 + 10px * 12)));
   }
 
   to {
@@ -454,7 +447,7 @@ EVENT DETAILS
 
 /* ==================================================
 EVENT
-====================================================*/
+==================================================== */
 .event {
   width: 100%;
   position: relative;
@@ -462,7 +455,8 @@ EVENT
 }
 
 
-/* decoration */
+/* Decoration
+-------------------------------------------------- */
 .event__top-Butterfly {
   width: 150px;
   position: absolute;
@@ -539,7 +533,8 @@ EVENT
 }
 
 
-/* content */
+/* Content
+-------------------------------------------------- */
 .event__wrapper {
   max-width: 1000px;
   padding: 0 20px;
@@ -558,26 +553,25 @@ EVENT
 .experience-right {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .experience-left {
-  align-items: flex-start;
+  flex-direction: row-reverse;
   margin-bottom: 100px;
 }
 
 .experience-right {
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin-bottom: 70px;
 }
 
-.experience__inner-img {
+.experience__img {
   width: 45%;
+  height: auto;
+  display: block;
   object-fit: contain;
   object-position: center;
-}
-
-.sp-experience__inner-img {
-  display: none;
 }
 
 .experience__container {
@@ -586,11 +580,11 @@ EVENT
 }
 
 .experience__container--title {
+  margin: 20px auto 20px 0;
   color: #fff;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 0.15em;
-  margin: 20px auto 20px 0;
 }
 
 .experience__container--text {
@@ -606,20 +600,20 @@ EVENT
   height: 90px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: url(../img/top-event/botan-kuwasiku.png) no-repeat center / contain;
   color: #fff;
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  background: url(../img/top-event/botan-kuwasiku.png) no-repeat center / contain;
-  margin: 0 auto;
 }
 
 
 /* ==================================================
 MENU
-====================================================*/
+==================================================== */
 .brown__bg {
   width: 100%;
   height: 100%;
@@ -676,8 +670,8 @@ MENU
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .menu__list-item {
@@ -686,8 +680,8 @@ MENU
   height: 130px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
   color: #fff;
   font-size: 22px;
   font-weight: bold;
@@ -713,9 +707,9 @@ MENU
 .menu-contact {
   width: 50%;
   height: 150px;
+  background-image: url(../img/top/menu-botan-bg3.png);
   font-size: 26px;
   line-height: 1.6;
-  background-image: url(../img/top/menu-botan-bg3.png);
 }
 
 
@@ -723,32 +717,31 @@ MENU
 RESPONSIVE
 Tablet / Smartphone
 768px以下
-====================================================*/
+==================================================== */
 @media (max-width: 768px) {
 
-  /* main visual */
+  /* Main Visual
+  ------------------------------------------------ */
   .green__bg {
     background:
-      url(../img/top/sp_river_1_0.png) no-repeat 80% 568px / 200% 102%,
+      url(../img/top/sp_river_1_0.png) no-repeat center 520px / 130% auto,
       url(../img/top/bg_green1-new.png) repeat center / cover;
   }
+
   .main-visual {
     height: 80svh;
     margin-top: -60px;
   }
 
-  .main-visual__img {
-
-  }
-
   .main-title {
-    width: 44%;
-    left: 56%;
-    transform: translateX(-15%);
+    width: 48%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
 
-  /* sponsor */
+  /* Sponsor
+  ------------------------------------------------ */
   .partner {
     font-size: 14px;
   }
@@ -763,13 +756,12 @@ Tablet / Smartphone
   }
 
 
-  /* overview */
+  /* Overview
+  ------------------------------------------------ */
   .top-overview__bg-left1,
   .top-overview__bg-left1-1 {
     display: none;
   }
-
-  
 
   .top-overview__bg-left2 {
     width: 200px;
@@ -802,41 +794,35 @@ Tablet / Smartphone
     max-width: 700px;
     padding: 88px 32px;
     text-align: center;
+    font-size: 1rem;
   }
 
-  .top-overview__wrapper  p{
+  .top-overview__wrapper p {
     line-height: 1.8;
+    
   }
-
 
   .top-overview__title {
     width: 65%;
   }
 
-  .top-overview__title--img {
-
-  }
-
-  .top-overview__subtitle {
-
-  }
-
   .top-overview__subtitle--img1,
   .top-overview__subtitle--img2 {
-
+ 
   }
 
   .top-overview__text--theme {
-    font-size: 18px;
     margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .top-overview__text {
-    font-size: 16px;
+    font-size: 17px;
   }
 
 
-  /* event details */
+  /* Event Details
+  ------------------------------------------------ */
   .deep-green__bg {
     background:
       url(../img/top/sp_river_2_0.png) no-repeat 81% 500px / 200% 78%,
@@ -845,9 +831,9 @@ Tablet / Smartphone
 
   .event-details__title {
     width: 80%;
-    text-align: center;
     padding: 0 20px;
     margin: 0 auto;
+    text-align: center;
   }
 
   .event-details__title-img {
@@ -864,8 +850,29 @@ Tablet / Smartphone
     width: 200px;
   }
 
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
 
-  /* event */
+    to {
+      transform: translateX(calc(-1 * (200px * 6 + 10px * 12)));
+    }
+  }
+
+  @keyframes scroll-right {
+    from {
+      transform: translateX(calc(-1 * (200px * 6 + 10px * 12)));
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+  /* Event
+  ------------------------------------------------ */
   .event__bg-left {
     display: none;
   }
@@ -916,35 +923,25 @@ Tablet / Smartphone
 
   .experience-left,
   .experience-right {
-    flex-direction: column;
-  }
-
-  .experience__inner-img {
-    display: none;
-  }
-
-  .sp-experience__inner-img {
-    width: 100%;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "title"
+      "image"
+      "text";
   }
 
   .experience__container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  .experience__container--title {
-    font-size: 22px;
-    letter-spacing: 0.2em;
-    text-align: center;
+    display: contents;
   }
 
   .experience__container--heading {
+    grid-area: heading;
     max-width: 200px;
     width: 50%;
-    text-align: center;
     margin: 0 auto;
+    text-align: center;
   }
 
   .heading__underbar {
@@ -953,9 +950,27 @@ Tablet / Smartphone
     border-bottom: 2px solid #fff;
   }
 
+  .experience__container--title {
+    grid-area: title;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+
+  .experience__img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .experience__container--text {
-    font-size: 18px;
+    grid-area: text;
+    width: 100%;
     margin-top: 20px;
+    font-size: 18px;
   }
 
   .experience__btn {
@@ -964,7 +979,8 @@ Tablet / Smartphone
   }
 
 
-  /* menu */
+  /* Menu
+  ------------------------------------------------ */
   .brown__bg {
     background:
       url(../img/top/sp_river_3_0.png) no-repeat 211px 62px / 91% 972px,
@@ -992,7 +1008,7 @@ Tablet / Smartphone
   }
 
   .menu__list-item {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.05em;
   }
 
@@ -1004,53 +1020,22 @@ Tablet / Smartphone
 
 
 /* ==================================================
-EVENT DETAILS ANIMATION
-768px以下
-====================================================*/
-@media (max-width: 768px) {
-
-  @keyframes scroll-left {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(
-        calc(-1 * (200px * 6 + 10px * 12))
-      );
-    }
-  }
-
-  @keyframes scroll-right {
-    from {
-      transform: translateX(
-        calc(-1 * (200px * 6 + 10px * 12))
-      );
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-}
-
-
-/* ==================================================
 RESPONSIVE
 Small Smartphone
 480px以下
-====================================================*/
+==================================================== */
 @media (max-width: 480px) {
 
-  /* main visual */
+  /* Main Visual
+  ------------------------------------------------ */
   .green__bg {
-    background-position: 56% 480px, center;
-    background-size: 200% 70%, cover;
+    background-position: center 460px, center;
+    background-size: 135% auto, cover;
   }
 
 
-
-  /* overview */
+  /* Overview
+  ------------------------------------------------ */
   .top-overview__bg-right-bench {
     display: none;
   }
@@ -1064,7 +1049,8 @@ Small Smartphone
   }
 
 
-  /* menu */
+  /* Menu
+  ------------------------------------------------ */
   .menu-title {
     width: 36%;
     height: auto;
@@ -1079,11 +1065,11 @@ Small Smartphone
 
   .menu__list-item {
     height: 80px;
-    font-size: 12px;
     margin-bottom: 20px;
+    font-size: 12px;
   }
 
   .menu-contact {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
