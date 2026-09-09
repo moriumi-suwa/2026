@@ -202,10 +202,12 @@ MAIN VISUAL
 SPONSOR
 ==================================================== */
 .partner {
-  margin-bottom: 30px;
+  margin: -12px auto 24px;
   font-size: 18px;
   letter-spacing: 0.15em;
   text-align: center;
+  position: relative;
+z-index: 100;
 }
 
 .sponsor {
@@ -551,26 +553,25 @@ EVENT
 .experience-right {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .experience-left {
-  align-items: flex-start;
+  flex-direction: row-reverse;
   margin-bottom: 100px;
 }
 
 .experience-right {
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin-bottom: 70px;
 }
 
-.experience__inner-img {
+.experience__img {
   width: 45%;
+  height: auto;
+  display: block;
   object-fit: contain;
   object-position: center;
-}
-
-.sp-experience__inner-img {
-  display: none;
 }
 
 .experience__container {
@@ -797,6 +798,7 @@ Tablet / Smartphone
 
   .top-overview__wrapper p {
     line-height: 1.8;
+    
   }
 
   .top-overview__title {
@@ -920,31 +922,21 @@ Tablet / Smartphone
 
   .experience-left,
   .experience-right {
-    flex-direction: column;
-  }
-
-  .experience__inner-img {
-    display: none;
-  }
-
-  .sp-experience__inner-img {
-    width: 100%;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "title"
+      "image"
+      "text";
   }
 
   .experience__container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  .experience__container--title {
-    font-size: 22px;
-    letter-spacing: 0.2em;
-    text-align: center;
+    display: contents;
   }
 
   .experience__container--heading {
+    grid-area: heading;
     max-width: 200px;
     width: 50%;
     margin: 0 auto;
@@ -957,7 +949,25 @@ Tablet / Smartphone
     border-bottom: 2px solid #fff;
   }
 
+  .experience__container--title {
+    grid-area: title;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+
+  .experience__img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .experience__container--text {
+    grid-area: text;
+    width: 100%;
     margin-top: 20px;
     font-size: 18px;
   }
