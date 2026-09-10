@@ -17,6 +17,9 @@ EVENT TOP
   margin-bottom: 150px;
 }
 
+.event-top__subtitle{
+  font-size: 21px;
+}
 
 /* ==================================================
 SPONSOR
@@ -945,7 +948,7 @@ EVENT PAGE CONTENT
 
 @media (max-width: 768px) {
   .event_title {
-    font-size: 2px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 3px;
   }
