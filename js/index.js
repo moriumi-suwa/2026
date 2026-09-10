@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // ローディング表示済みとして保存
       sessionStorage.setItem("moriumiLoaded", "true");
     }, 1000);
-  }, 3000);
+  }, 2500);
 });
 
 // ===========================
