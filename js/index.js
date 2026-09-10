@@ -1,28 +1,32 @@
 // ===========================
-// loading
+// loading（セッション中、最初の1回だけ表示）
 // ===========================
-document.addEventListener("DOMContentLoaded", function() {
-  // Wait for 5 seconds
-  setTimeout(function() {
-    // Hide the loading screen
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.opacity = '0';
-
-    // Display the main content and remove the loading screen from the DOM after the transition
-    setTimeout(function() {
-      loadingScreen.style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    }, 1000); // Wait for CSS transition to finish
-  }, 5000);
-});
-// ===========================
-// main-title　ふんわり表示
-// ===========================
-
 document.addEventListener("DOMContentLoaded", function () {
+  const loadingScreen = document.getElementById("loading-screen");
+  const mainContent = document.getElementById("main-content");
+
+  // このタブで既にローディングを表示したか確認
+  const hasLoaded = sessionStorage.getItem("moriumiLoaded");
+
+  if (hasLoaded) {
+    // 2回目以降
+    loadingScreen.style.display = "none";
+    mainContent.style.display = "block";
+    return;
+  }
+
+  // 初回アクセス
   setTimeout(function () {
-    document.querySelector(".main-title").classList.add("visible");
-  }, 500);
+    loadingScreen.style.opacity = "0";
+
+    setTimeout(function () {
+      loadingScreen.style.display = "none";
+      mainContent.style.display = "block";
+
+      // ローディング表示済みとして保存
+      sessionStorage.setItem("moriumiLoaded", "true");
+    }, 1000);
+  }, 3000);
 });
 
 // ===========================
