@@ -175,6 +175,22 @@ menu
     height: 100px;
     letter-spacing: 0.05em;
   }
+
+  /*tokyu */
+.sponsor-table__logo .logo-tokyu {
+  height: 100px;
+}
+
+/* KITZ */
+.sponsor-table__logo .logo-kitz {
+  height: 100px;
+}
+
+/* 浜松ホトニクス */
+.sponsor-table__logo .logo-hamamatsu {
+  height: 80px;
+}
+
 }
 @media (max-width: 570px) {
   .menu-list {
