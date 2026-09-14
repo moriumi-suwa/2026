@@ -83,7 +83,7 @@ sponsor-table（主催〜協力までの一覧）
 
 /* 浜松ホトニクス */
 .sponsor-table__logo .logo-hamamatsu {
-  width: 200px;
+  height: 40px;
 }
 
 .sponsor-table__note {
