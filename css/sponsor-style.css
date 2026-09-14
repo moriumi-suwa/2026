@@ -63,9 +63,29 @@ sponsor-table（主催〜協力までの一覧）
   gap: 40px;
   flex-wrap: wrap;
 }
+
 .sponsor-table__logo img {
-  width: 160px;
+  display: block;
+  width: auto;
+  height: 60px;
+  object-fit: contain;
 }
+
+/*tokyu */
+.sponsor-table__logo .logo-tokyu {
+  height: 60px;
+}
+
+/* KITZ */
+.sponsor-table__logo .logo-kitz {
+  height: 60px;
+}
+
+/* 浜松ホトニクス */
+.sponsor-table__logo .logo-hamamatsu {
+  width: 200px;
+}
+
 .sponsor-table__note {
   margin-top: 8px;
   font-size: 13px;
