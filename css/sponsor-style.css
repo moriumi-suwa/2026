@@ -53,6 +53,7 @@ sponsor-table（主催〜協力までの一覧）
   position: relative;
   padding-left: 1em;
   display: inline;
+  white-space: nowrap;
 }
 .sponsor-table td ul li::before {
   content: "・";
