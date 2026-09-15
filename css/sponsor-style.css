@@ -73,17 +73,17 @@ sponsor-table（主催〜協力までの一覧）
 
 /*tokyu */
 .sponsor-table__logo .logo-tokyu {
-  height: 60px;
+  
 }
 
 /* KITZ */
 .sponsor-table__logo .logo-kitz {
-  height: 60px;
+  height: 40px;
 }
 
 /* 浜松ホトニクス */
 .sponsor-table__logo .logo-hamamatsu {
-  height: 40px;
+  height: 35px;
 }
 
 .sponsor-table__note {
@@ -183,7 +183,7 @@ menu
 
 /* KITZ */
 .sponsor-table__logo .logo-kitz {
-  height: 100px;
+  height: 80px;
 }
 
 /* 浜松ホトニクス */
