@@ -562,6 +562,19 @@ EVENT
 }
 
 
+.download-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0;
+  text-decoration: none;
+}
+
 /* ==================================================
 MENU
 ==================================================== */
