@@ -16,7 +16,7 @@
 .guide-card__title { font-size: 1.05rem; font-weight: 600; line-height: 1.5; }
 .guide-card__arrow { font-size: 1.15rem; }
 @media (max-width: 767px) {
-  .schedule-page { padding-bottom: 56px; }
+  .schedule-page { padding: 56px; }
   .guide-intro { margin: 32px auto 40px; }
   .guide-all-btn { min-width: 0; width: 100%; padding: 16px 18px; }
   .guide-card__link { gap: 12px; padding: 18px 2px; }
