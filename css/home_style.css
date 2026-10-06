@@ -986,3 +986,29 @@ HOME COMMON CONTENT
   }
 }
 
+/* ==================================================
+当日のご案内ボタン
+==================================================== */
+.schedule-btn {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto 56px;
+  padding: 14px 40px;
+  align-items: center;
+  justify-content: center;
+  background: #c83232;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .schedule-btn {
+    width: calc(100% - 64px);
+    max-width: 320px;
+    margin: 32px auto 48px;
+    padding: 13px 24px;
+  }
+}
